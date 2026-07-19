@@ -68,6 +68,41 @@ function ghostCopy(btn){
   if(document.readyState!=='loading')initTabs();
   else document.addEventListener('DOMContentLoaded',initTabs);
 })();
+(function(){
+  function initDevice(){
+    var form=document.getElementById('gs-device-form');
+    if(!form)return;
+    var API='https://ghost-backend-production-f062.up.railway.app';
+    var input=document.getElementById('gs-device-code');
+    var btn=document.getElementById('gs-device-submit');
+    var status=document.getElementById('gs-device-status');
+    var card=document.getElementById('gs-device-card');
+    var ok=document.getElementById('gs-device-success');
+    function fmt(v){v=(v||'').toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,8);return v.length>4?v.slice(0,4)+'-'+v.slice(4):v;}
+    function say(m,k){status.textContent=m||'';if(k)status.setAttribute('data-kind',k);else status.removeAttribute('data-kind');}
+    try{var qs=new URLSearchParams(location.search);var pre=qs.get('code')||qs.get('user_code');if(pre)input.value=fmt(pre);}catch(e){}
+    input.addEventListener('input',function(){input.value=fmt(input.value);});
+    form.addEventListener('submit',function(ev){
+      ev.preventDefault();
+      var code=fmt(input.value);
+      if(!/^[A-Z0-9]{4}-[A-Z0-9]{4}$/.test(code)){say('Enter the 8-character code from your terminal, like K7Q2-9FMX.','err');input.focus();return;}
+      btn.disabled=true;var restore=btn.textContent;btn.textContent='Authorizing...';say('','');
+      fetch(API+'/auth/device/verify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user_code:code})})
+        .then(function(r){return r.json().then(function(b){return {s:r.status,b:b};},function(){return {s:r.status,b:{}};});})
+        .then(function(res){
+          if(res.s===200){if(card)card.hidden=true;if(ok){ok.hidden=false;try{ok.scrollIntoView({block:'center'});}catch(e){}}return;}
+          btn.disabled=false;btn.textContent=restore;
+          if(res.s===404){say('That code is invalid, expired, or already used. Run ghost login again to get a fresh one.','err');}
+          else if(res.s===503){say('The Ghost network is temporarily unavailable. Give it a moment and try again.','err');}
+          else if(res.s===429){say('Too many attempts. Wait a few seconds, then try again.','err');}
+          else{say((res.b&&res.b.detail)?String(res.b.detail):'Something went wrong. Please try again.','err');}
+        })
+        .catch(function(){btn.disabled=false;btn.textContent=restore;say('Could not reach Ghost. Check your connection and try again.','err');});
+    });
+  }
+  if(document.readyState!=='loading')initDevice();
+  else document.addEventListener('DOMContentLoaded',initDevice);
+})();
 `;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

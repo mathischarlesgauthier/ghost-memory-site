@@ -349,13 +349,85 @@ export const CONTENT_HTML = `
     </div>
   </section>
 
-  <section hidden style="padding:150px 32px 0;">
-    <div style="max-width:960px;margin:0 auto;border-top:1px solid rgba(255,255,255,.08);padding-top:28px;">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
-        <div style="border:1px dashed rgba(255,255,255,.12);border-radius:10px;min-height:120px;"></div>
-        <div style="border:1px dashed rgba(255,255,255,.12);border-radius:10px;min-height:120px;"></div>
-        <div style="border:1px dashed rgba(255,255,255,.12);border-radius:10px;min-height:120px;"></div>
+  <section id="lift" style="padding:150px 32px 0;">
+    <div style="max-width:1000px;margin:0 auto;">
+
+      <div data-reveal="" style="text-align:center;display:flex;flex-direction:column;align-items:center;">
+        <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#7ce38b;border:1px solid rgba(124,227,139,.25);background:rgba(124,227,139,.06);border-radius:999px;padding:5px 14px;">Measurement</span>
+        <h2 style="margin:20px 0 0;font-size:clamp(30px,3.6vw,42px);font-weight:600;letter-spacing:-0.025em;text-wrap:balance;">Lift is the only number that matters.</h2>
+        <p style="margin:18px 0 0;font-size:16px;line-height:1.7;color:#9b9ba4;max-width:600px;text-wrap:pretty;">How much a skill actually improves a task — measured by rerunning it, not guessed from a download count.</p>
       </div>
+
+      <div class="gb-lift-anim" data-reveal="" style="margin-top:56px;background:#0d0d10;border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:26px 30px 32px;">
+        <div style="display:flex;justify-content:center;margin-bottom:6px;"><span class="gb-illus">ILLUSTRATIVE EXAMPLE</span></div>
+        <div class="gb-lift-grid">
+          <div class="gb-lift-col gb-lift-without">
+            <div class="gb-lift-cap">WITHOUT THE SKILL</div>
+            <div class="gb-lift-n">14 <span>steps</span></div>
+            <div class="gb-lift-bars">
+              <div class="gb-lift-bar" style="--i:0"><i style="background:#55555f"></i></div>
+              <div class="gb-lift-bar" style="--i:1"><i style="background:#55555f"></i></div>
+              <div class="gb-lift-bar" style="--i:2"><i style="background:#55555f"></i></div>
+              <div class="gb-lift-bar" style="--i:3"><i style="background:#55555f"></i></div>
+              <div class="gb-lift-bar" style="--i:4"><i style="background:#e05c5c"></i></div>
+              <div class="gb-lift-bar" style="--i:5"><i style="background:#55555f"></i></div>
+              <div class="gb-lift-bar" style="--i:6"><i style="background:#55555f"></i></div>
+              <div class="gb-lift-bar" style="--i:7"><i style="background:#55555f"></i></div>
+              <div class="gb-lift-bar" style="--i:8"><i style="background:#55555f"></i></div>
+              <div class="gb-lift-bar" style="--i:9"><i style="background:#e05c5c"></i></div>
+              <div class="gb-lift-bar" style="--i:10"><i style="background:#55555f"></i></div>
+              <div class="gb-lift-bar" style="--i:11"><i style="background:#55555f"></i></div>
+              <div class="gb-lift-bar" style="--i:12"><i style="background:#55555f"></i></div>
+              <div class="gb-lift-bar" style="--i:13"><i style="background:#55555f"></i></div>
+            </div>
+            <div class="gb-lift-status" style="color:#e05c5c;">✗ failed</div>
+          </div>
+
+          <div style="text-align:center;">
+            <div class="gb-lift-pct">−57%</div>
+            <div class="gb-lift-pct-sub">fewer steps · this example</div>
+          </div>
+
+          <div class="gb-lift-col gb-lift-with">
+            <div class="gb-lift-cap">WITH THE SKILL</div>
+            <div class="gb-lift-n">6 <span>steps</span></div>
+            <div class="gb-lift-bars">
+              <div class="gb-lift-bar" style="--i:0"><i style="background:#7ce38b"></i></div>
+              <div class="gb-lift-bar" style="--i:1"><i style="background:#7ce38b"></i></div>
+              <div class="gb-lift-bar" style="--i:2"><i style="background:#7ce38b"></i></div>
+              <div class="gb-lift-bar" style="--i:3"><i style="background:#7ce38b"></i></div>
+              <div class="gb-lift-bar" style="--i:4"><i style="background:#7ce38b"></i></div>
+              <div class="gb-lift-bar" style="--i:5"><i style="background:#7ce38b"></i></div>
+            </div>
+            <div class="gb-lift-status" style="color:#7ce38b;">✓ committed</div>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal="" style="margin-top:56px;display:flex;justify-content:center;"><span class="gb-illus">ILLUSTRATIVE</span></div>
+      <div data-reveal="" style="margin-top:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
+        <div class="gb-card" style="background:#0d0d10;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:22px 24px;">
+          <div style="font-family:'Geist Mono',monospace;font-size:14px;color:#ececf1;font-weight:500;line-height:1.4;">Alembic migration on a ledger table</div>
+          <div style="margin-top:12px;font-size:13.5px;color:#9b9ba4;line-height:1.55;">7 failed attempts learned once <span style="color:#7ce38b;">→</span> applied instantly</div>
+        </div>
+        <div class="gb-card" style="background:#0d0d10;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:22px 24px;">
+          <div style="font-family:'Geist Mono',monospace;font-size:14px;color:#ececf1;font-weight:500;line-height:1.4;">TypeScript compile loop (edit → edit → tsc)</div>
+          <div style="margin-top:12px;font-size:13.5px;color:#9b9ba4;line-height:1.55;">the fix it kept rediscovering, remembered</div>
+        </div>
+        <div class="gb-card" style="background:#0d0d10;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:22px 24px;">
+          <div style="font-family:'Geist Mono',monospace;font-size:14px;color:#ececf1;font-weight:500;line-height:1.4;">API status-code guessing</div>
+          <div style="margin-top:12px;font-size:13.5px;color:#9b9ba4;line-height:1.55;">stops guessing, checks the contract</div>
+        </div>
+      </div>
+
+      <div data-reveal="" style="margin-top:60px;max-width:780px;margin-left:auto;margin-right:auto;text-align:center;">
+        <p style="margin:0;font-size:17px;line-height:1.8;color:#9b9ba4;text-wrap:pretty;">670,000 skills out there, ranked by download count — a number you can buy.</p>
+        <p style="margin:12px 0 0;font-size:17px;line-height:1.8;color:#c9c9d1;font-weight:500;text-wrap:pretty;">We rank by what a skill does to real code.</p>
+        <p style="margin:26px 0 0;font-family:'Geist Mono',monospace;font-size:clamp(20px,2.6vw,30px);color:#7ce38b;">We don't count. We measure.</p>
+      </div>
+
+      <p style="margin:34px auto 0;max-width:620px;text-align:center;font-size:13px;line-height:1.7;color:#62626c;text-wrap:pretty;">Every real number on this site comes from replaying your own past tasks. Until yours are measured, the examples above are just that — examples.</p>
+
     </div>
   </section>
 

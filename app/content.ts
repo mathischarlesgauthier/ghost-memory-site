@@ -7,11 +7,14 @@
 // rendus sans JavaScript (details/summary, valeurs statiques).
 
 const GITHUB = "https://github.com/mathischarlesgauthier/ghost-memory";
+// Base de l'API réseau (Lot G). CTA payants → /login (web device flow → cookie
+// → Checkout). À pointer sur l'URL Railway/domaine une fois le backend live.
+const API_BASE = "https://api.ghost-memory.com";
 
 export const CONTENT_HTML = `
 <div style="min-height:100vh;background:#0a0a0c;overflow-x:hidden;">
 
-  <div style="background:#131316;border-bottom:1px solid rgba(255,255,255,.06);text-align:center;padding:7px 16px;font-family:'Geist Mono',monospace;font-size:12px;color:#9b9ba4;">Preview — Pro tier not yet available.</div>
+  <div style="background:#131316;border-bottom:1px solid rgba(255,255,255,.06);text-align:center;padding:7px 16px;font-family:'Geist Mono',monospace;font-size:12px;color:#9b9ba4;">Early access — the collective memory is just getting seeded. Your contributions seed it.</div>
 
   <header style="position:sticky;top:0;z-index:50;background:rgba(10,10,12,.82);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06);">
     <div style="display:flex;align-items:center;gap:28px;max-width:1120px;margin:0 auto;padding:14px 32px;">
@@ -32,15 +35,31 @@ export const CONTENT_HTML = `
 
   <section id="hero" style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:96px 32px 0;">
     <div style="position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:720px;height:480px;max-width:100%;background:radial-gradient(closest-side,rgba(124,227,139,.07),transparent);pointer-events:none;"></div>
-    <h1 style="margin:0;font-size:clamp(44px,6.2vw,76px);font-weight:600;letter-spacing:-0.035em;line-height:1.04;text-wrap:balance;position:relative;">Fix it once.<br>Never twice.</h1>
-    <p style="margin:22px 0 0;max-width:600px;font-size:17px;line-height:1.65;color:#9b9ba4;text-wrap:pretty;position:relative;">Your coding agent forgets everything between sessions. Ghost&nbsp;Memory reads your history, extracts what you already taught it, and feeds it back at the right moment.</p>
+    <h1 style="margin:0;font-size:clamp(40px,5.6vw,70px);font-weight:600;letter-spacing:-0.035em;line-height:1.06;text-wrap:balance;position:relative;max-width:900px;">Your agent, powered by every developer's hard-won lessons.</h1>
+    <p style="margin:24px 0 0;max-width:640px;font-size:17px;line-height:1.65;color:#9b9ba4;text-wrap:pretty;position:relative;">Ghost&nbsp;Memory taps the collective memory of thousands of developers — the fixes, the shortcuts, the traps they learned the hard way — and feeds the right one into your agent as you code. <span style="color:#c9c9d1;">Ranked by what actually works. Measured, not upvoted.</span></p>
     <div style="margin-top:34px;display:flex;align-items:center;gap:14px;max-width:100%;background:#101014;border:1px solid rgba(255,255,255,.09);border-radius:8px;padding:12px 14px 12px 18px;font-family:'Geist Mono',monospace;font-size:15px;box-shadow:0 8px 32px rgba(0,0,0,.45);position:relative;">
       <span style="color:#62626c;user-select:none;">$</span>
       <span class="gb-cmd" style="color:#ececf1;white-space:nowrap;">uv tool install git+https://github.com/mathischarlesgauthier/ghost-memory</span>
       <button data-label="copy" onclick="ghostCopy(this)" class="gb-copy" style="margin-left:8px;flex-shrink:0;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:5px;color:#9b9ba4;font-family:'Geist Mono',monospace;font-size:12px;padding:5px 11px;cursor:pointer;">copy</button>
     </div>
-    <p style="margin:12px 0 0;font-family:'Geist Mono',monospace;font-size:12px;color:#62626c;position:relative;max-width:100%;">Prefer pip? &nbsp;<span class="gb-cmd" style="color:#9b9ba4;white-space:nowrap;">pip install git+https://github.com/mathischarlesgauthier/ghost-memory</span></p>
-    <p style="margin:14px 0 0;font-family:'Geist Mono',monospace;font-size:12px;color:#62626c;position:relative;">Runs on your existing history. Nothing leaves your machine.</p>
+    <p style="margin:12px 0 0;font-family:'Geist Mono',monospace;font-size:13px;color:#9b9ba4;position:relative;">then <span style="color:#7ce38b;">ghost init</span> <span style="color:#62626c;">— see your candidates in 90 seconds</span></p>
+    <p style="margin:10px 0 0;font-family:'Geist Mono',monospace;font-size:12px;color:#62626c;position:relative;max-width:100%;">Prefer pip? &nbsp;<span class="gb-cmd" style="color:#9b9ba4;white-space:nowrap;">pip install git+https://github.com/mathischarlesgauthier/ghost-memory</span></p>
+    <div style="margin-top:26px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 14px;position:relative;">
+      <span class="gb-benefit">Fewer wasted tokens</span>
+      <span style="color:#33333a;">·</span>
+      <span class="gb-benefit">Fewer retries</span>
+      <span style="color:#33333a;">·</span>
+      <span class="gb-benefit">Your stack, not generic advice</span>
+    </div>
+    <p style="margin:18px 0 0;font-family:'Geist Mono',monospace;font-size:12px;color:#62626c;position:relative;">Runs on your existing history. Nothing leaves your machine.</p>
+  </section>
+
+  <section style="padding:72px 32px 0;">
+    <div data-reveal="" style="max-width:720px;margin:0 auto;text-align:center;">
+      <p style="margin:0;font-size:17px;line-height:1.8;color:#9b9ba4;text-wrap:pretty;">670,000 skills out there, ranked by download count. <span style="color:#62626c;">A number you can buy. It tells you nothing.</span></p>
+      <p style="margin:16px 0 0;font-size:17px;line-height:1.8;color:#c9c9d1;font-weight:500;text-wrap:pretty;">Ghost&nbsp;Memory ranks by <span style="color:#7ce38b;">lift</span> — how much a skill actually improves a real task, measured by rerunning it.</p>
+      <p style="margin:24px 0 0;font-family:'Geist Mono',monospace;font-size:clamp(20px,2.6vw,30px);color:#7ce38b;">We don't count. We measure.</p>
+    </div>
   </section>
 
   <section style="padding:72px 32px 0;">
@@ -214,73 +233,63 @@ export const CONTENT_HTML = `
   </section>
 
   <section id="pricing" style="padding:150px 32px 0;">
-    <div style="max-width:1060px;margin:0 auto;">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;align-items:start;">
-        <div data-reveal="">
-          <div class="gb-price" style="background:#101014;border:1px solid rgba(124,227,139,.45);border-radius:14px;padding:36px 32px;box-shadow:0 0 80px rgba(124,227,139,.08);transition:transform .3s ease, box-shadow .3s ease;">
-            <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;">
-              <h3 style="margin:0;font-size:18px;font-weight:600;">Free</h3>
-              <span style="font-family:'Geist Mono',monospace;font-size:14px;color:#7ce38b;">$0 · forever</span>
-            </div>
-            <p style="margin:16px 0 0;font-size:17px;color:#ececf1;font-weight:500;">Your own memory.</p>
-            <ul style="margin:26px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;font-size:14px;line-height:1.55;">
-              <li style="display:flex;gap:10px;"><span style="color:#7ce38b;">✓</span><span style="color:#c9c9d1;">Reads your entire session history <span style="color:#62626c;">— 400 sessions, all of it</span></span></li>
-              <li style="display:flex;gap:10px;"><span style="color:#7ce38b;">✓</span><span style="color:#c9c9d1;">Distills skills automatically <span style="color:#62626c;">— you write nothing</span></span></li>
-              <li style="display:flex;gap:10px;"><span style="color:#7ce38b;">✓</span><span style="color:#c9c9d1;">Refuses to distill noise <span style="color:#62626c;">— candidates get skipped, on purpose</span></span></li>
-              <li style="display:flex;gap:10px;"><span style="color:#7ce38b;">✓</span><span style="color:#c9c9d1;">Injects the right skill at the right moment <span style="color:#62626c;">— you search for nothing</span></span></li>
-              <li style="display:flex;gap:10px;"><span style="color:#7ce38b;">✓</span><span style="color:#c9c9d1;">Unlimited. <span style="color:#62626c;">No request caps. No quota. No seat limit.</span></span></li>
-              <li style="display:flex;gap:10px;"><span style="color:#7ce38b;">✓</span><span style="color:#c9c9d1;">Runs on your own API key <span style="color:#62626c;">— your code never leaves your machine</span></span></li>
-              <li style="display:flex;gap:10px;"><span style="color:#7ce38b;">✓</span><span style="color:#c9c9d1;">Private by default <span style="color:#62626c;">— nothing published without you seeing the diff</span></span></li>
-              <li style="display:flex;gap:10px;"><span style="color:#7ce38b;">✓</span><span style="color:#c9c9d1;">Open source <span style="color:#62626c;">— read every line before you run it</span></span></li>
-            </ul>
-            <button data-label="[ uv tool install git+https://github.com/mathischarlesgauthier/ghost-memory ]" onclick="ghostCopy(this)" class="gb-btn-free" style="margin-top:30px;width:100%;background:#7ce38b;border:1px solid #7ce38b;border-radius:7px;color:#0a0a0c;font-family:'Geist Mono',monospace;font-size:12px;font-weight:600;padding:12px 10px;cursor:pointer;line-height:1.5;word-break:break-all;">[ uv tool install git+https://github.com/mathischarlesgauthier/ghost-memory ]</button>
-          </div>
-          <p style="margin:16px 4px 0;font-size:13px;line-height:1.7;color:#62626c;text-wrap:pretty;">Free because it costs us nothing. Your machine, your key. Not generosity — honesty about our costs.</p>
+    <div style="max-width:1120px;margin:0 auto;">
+      <div data-reveal="" style="text-align:center;display:flex;flex-direction:column;align-items:center;">
+        <span style="font-family:'Geist Mono',monospace;font-size:12px;color:#7ce38b;border:1px solid rgba(124,227,139,.25);background:rgba(124,227,139,.06);border-radius:999px;padding:5px 14px;">Pricing</span>
+        <h2 style="margin:20px 0 0;font-size:clamp(30px,3.6vw,42px);font-weight:600;letter-spacing:-0.025em;line-height:1.15;text-wrap:balance;">Your own memory is free.<br><span style="color:#9b9ba4;">The collective memory is the product.</span></h2>
+        <p style="margin:18px 0 0;max-width:640px;font-size:16px;line-height:1.7;color:#9b9ba4;text-wrap:pretty;">We never charge for retrieving your own skills, distilling on your own key, or validating. You pay only for access to the collective memory — measured in <span style="color:#7ce38b;">unlocks</span>.</p>
+      </div>
+      <div class="gb-tiers">
+        <div class="gb-tier">
+          <h3>Free</h3>
+          <div class="gb-price-tag">$0<span> / mo</span></div>
+          <div class="gb-tagline">Your own memory</div>
+          <ul>
+            <li><span class="gb-check">&#10003;</span><span>Capture, distill &amp; retrieve your own skills — <span class="gb-kw">unlimited</span>, on your own key, forever</span></li>
+            <li><span class="gb-check">&#10003;</span><span>+ 5 community unlocks <span style="color:#62626c;">(one-time, to try)</span></span></li>
+          </ul>
+          <button data-label="[ Install ]" onclick="ghostCopy(this)" class="gb-tier-cta gb-tier-cta-primary" style="cursor:pointer;font-family:'Geist Mono',monospace;">[ Install ]</button>
+          <p style="margin:12px 0 0;font-size:11.5px;line-height:1.55;color:#62626c;">An unlock is a distinct community skill added to your library. Yours to reuse as much as you want, as long as your plan is active.</p>
         </div>
-        <div data-reveal="">
-          <div class="gb-price-pro" style="background:#0f0f13;border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:36px 32px;box-shadow:0 24px 90px rgba(0,0,0,.55);transition:transform .3s ease, box-shadow .3s ease;">
-            <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;">
-              <h3 style="margin:0;font-size:18px;font-weight:600;">Pro</h3>
-              <span style="font-family:'Geist Mono',monospace;font-size:14px;color:#ececf1;">$29 <span style="color:#62626c;">/ month</span></span>
-            </div>
-            <p style="margin:16px 0 0;font-size:17px;color:#ececf1;font-weight:500;">Everyone else's memory.</p>
-            <div class="gb-idx" style="margin-top:18px;display:flex;flex-direction:column;gap:6px;">
-              <span style="width:84%;background:#7ce38b;"></span>
-              <span style="width:66%;background:rgba(124,227,139,.55);"></span>
-              <span style="width:48%;background:rgba(124,227,139,.3);"></span>
-              <span style="width:22%;background:#e05c5c;"></span>
-            </div>
-            <p style="margin:20px 0 0;font-size:13.5px;color:#9b9ba4;">Everything in Free, plus:</p>
-            <div style="margin-top:20px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#7ce38b;">THE INDEX</div>
-            <ul style="margin:12px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px;font-size:14px;line-height:1.55;">
-              <li style="display:flex;gap:10px;"><span style="color:#7ce38b;">✓</span><span style="color:#c9c9d1;">Every skill ranked by measured effect on real code <span style="color:#62626c;">— not by download count</span></span></li>
-              <li style="display:flex;gap:10px;"><span style="color:#7ce38b;">✓</span><span style="color:#c9c9d1;">Ranked for YOUR stack <span style="color:#62626c;">— the same skill can help you and hurt someone else. We know which</span></span></li>
-              <li style="display:flex;gap:10px;"><span style="color:#7ce38b;">✓</span><span style="color:#c9c9d1;">Skills for mistakes you haven't made yet <span style="color:#62626c;">— the ones that cost someone else a weekend</span></span></li>
-              <li style="display:flex;gap:10px;"><span style="color:#7ce38b;">✓</span><span style="color:#c9c9d1;">Skills that hurt get demoted automatically <span style="color:#62626c;">— the index cleans itself</span></span></li>
-            </ul>
-            <div style="margin-top:22px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#7ce38b;">PROOF</div>
-            <ul style="margin:12px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px;font-size:14px;line-height:1.55;">
-              <li style="display:flex;gap:10px;"><span style="color:#7ce38b;">✓</span><span style="color:#c9c9d1;">Unlimited replay validation <span style="color:#62626c;">— we rerun your own past tasks with and without a skill, and show you the delta</span></span></li>
-              <li style="display:flex;gap:10px;"><span style="color:#7ce38b;">✓</span><span style="color:#c9c9d1;">Continuous holdout <span style="color:#62626c;">— we withhold skills on a slice of your sessions on purpose, so the number stays honest</span></span></li>
-              <li style="display:flex;gap:10px;"><span style="color:#7ce38b;">✓</span><span style="color:#c9c9d1;">Method visible on every number <span style="color:#62626c;">— no black box</span></span></li>
-            </ul>
-            <div style="margin-top:22px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#7ce38b;">THE REST</div>
-            <ul style="margin:12px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px;font-size:14px;line-height:1.55;">
-              <li style="display:flex;gap:10px;"><span style="color:#7ce38b;">✓</span><span style="color:#c9c9d1;">Premium skills <span style="color:#62626c;">— distilled from hundreds of hours in production, not regenerable by any prompt</span></span></li>
-              <li style="display:flex;gap:10px;"><span style="color:#7ce38b;">✓</span><span style="color:#c9c9d1;">Sync across machines</span></li>
-              <li style="display:flex;gap:10px;"><span style="color:#7ce38b;">✓</span><span style="color:#c9c9d1;">Publish and sell your own <span style="color:#62626c;">— you keep 80%</span></span></li>
-              <li style="display:flex;gap:10px;"><span style="color:#7ce38b;">✓</span><span style="color:#c9c9d1;">Public profile <span style="color:#62626c;">— installs and measured effect. It's a CV.</span></span></li>
-            </ul>
-            <button class="gb-btn-pro" style="margin-top:30px;width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:7px;color:#ececf1;font-family:'Geist Mono',monospace;font-size:13.5px;font-weight:600;padding:12px 0;cursor:pointer;">[ Get Pro ]</button>
-          </div>
-          <p style="margin:16px 4px 0;font-size:13px;line-height:1.7;color:#62626c;">Cheaper than one failed session a month.</p>
+        <div class="gb-tier gb-tier-pro">
+          <h3>Pro</h3>
+          <div class="gb-price-tag">$29<span> / mo</span></div>
+          <div class="gb-tagline">The collective memory</div>
+          <ul>
+            <li><span class="gb-check">&#10003;</span><span>Everything in Free, plus:</span></li>
+            <li><span class="gb-check">&#10003;</span><span><span style="color:#ececf1;font-weight:500;">200 community skill unlocks</span> / month</span></li>
+            <li><span class="gb-check">&#10003;</span><span>Ranked by measured lift</span></li>
+            <li><span class="gb-check">&#10003;</span><span>Sync across machines</span></li>
+          </ul>
+          <a href="${API_BASE}/login?tier=pro" class="gb-tier-cta gb-tier-cta-primary">[ Get Pro ]</a>
+        </div>
+        <div class="gb-tier">
+          <h3>Team</h3>
+          <div class="gb-price-tag">$95<span> / mo</span></div>
+          <div class="gb-tagline">Shared memory</div>
+          <ul>
+            <li><span class="gb-check">&#10003;</span><span>Everything in Pro, plus:</span></li>
+            <li><span class="gb-check">&#10003;</span><span><span style="color:#ececf1;font-weight:500;">1,000 unlocks</span> / month</span></li>
+            <li><span class="gb-check">&#10003;</span><span>Shared team registry</span></li>
+          </ul>
+          <a href="${API_BASE}/login?tier=team" class="gb-tier-cta">[ Get Team ]</a>
+        </div>
+        <div class="gb-tier">
+          <h3>Scale</h3>
+          <div class="gb-price-tag">$195<span> / mo</span></div>
+          <div class="gb-tagline">Enterprise memory</div>
+          <ul>
+            <li><span class="gb-check">&#10003;</span><span>Everything in Team, plus:</span></li>
+            <li><span class="gb-check">&#10003;</span><span><span style="color:#ececf1;font-weight:500;">4,000 unlocks</span> / month</span></li>
+            <li><span class="gb-check">&#10003;</span><span>Private registry</span></li>
+            <li><span class="gb-check">&#10003;</span><span>Usage-based beyond quota</span></li>
+          </ul>
+          <a href="${API_BASE}/login?tier=scale" class="gb-tier-cta">[ Get Scale ]</a>
         </div>
       </div>
-      <div data-reveal="" style="margin:110px auto 0;max-width:720px;text-align:center;">
-        <p style="margin:0;font-size:17px;line-height:1.8;color:#9b9ba4;text-wrap:pretty;">There are <span style="font-family:'Geist Mono',monospace;font-weight:600;color:#ececf1;">670,000</span> agent skills out there. They're ranked by download count — a number you can buy, and that tells you nothing.</p>
-        <p style="margin:18px 0 0;font-size:17px;line-height:1.8;color:#9b9ba4;text-wrap:pretty;">A benchmark scored <span style="font-family:'Geist Mono',monospace;font-weight:600;color:#ececf1;">47,150</span> of them. Average: <span style="font-family:'Geist Mono',monospace;font-weight:600;color:#e0a05c;">6.2</span> out of 12.</p>
-        <p style="margin:18px 0 0;font-size:17px;line-height:1.8;color:#c9c9d1;font-weight:500;">Most do nothing. Some make your agent worse.</p>
-        <p style="margin:40px 0 0;font-family:'Geist Mono',monospace;font-size:clamp(22px,2.8vw,32px);color:#7ce38b;">We don't count. We measure.<span style="display:inline-block;width:10px;height:22px;background:#7ce38b;margin-left:10px;vertical-align:-2px;animation:gbBlink 1.1s steps(1) infinite;"></span></p>
+      <div data-reveal="" style="margin:40px auto 0;max-width:760px;text-align:center;">
+        <p style="margin:0;font-size:16px;line-height:1.7;color:#c9c9d1;text-wrap:pretty;">We never charge for your own work. Only for the collective memory you draw from.</p>
+        <p style="margin:12px 0 0;font-size:15px;line-height:1.7;color:#9b9ba4;text-wrap:pretty;">Beyond your quota, pay as you go — like your API bill, but for skills that actually work.</p>
       </div>
     </div>
   </section>

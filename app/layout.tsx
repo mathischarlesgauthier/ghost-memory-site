@@ -3,9 +3,9 @@ import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ghost-memory.com"),
-  title: "Ghost Memory — fix it once, never twice",
+  title: "Ghost Memory — the collective memory for coding agents",
   description:
-    "Your coding agent forgets everything between sessions. Ghost Memory reads your history, extracts what you already taught it, and feeds it back at the right moment. Runs on your existing history. Nothing leaves your machine.",
+    "Ghost Memory taps the collective memory of thousands of developers — the fixes, the shortcuts, the traps they learned the hard way — and feeds the right one into your agent as you code. Ranked by what actually works. Measured, not upvoted.",
   icons: { icon: "/ghost-logo.svg" },
 };
 

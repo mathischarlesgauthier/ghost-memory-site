@@ -7,9 +7,10 @@
 // rendus sans JavaScript (details/summary, valeurs statiques).
 
 const GITHUB = "https://github.com/mathischarlesgauthier/ghost-memory";
-// Base de l'API réseau (Lot G). CTA payants → /login (web device flow → cookie
-// → Checkout). À pointer sur l'URL Railway/domaine une fois le backend live.
-const API_BASE = "https://api.ghost-memory.com";
+// Base de l'API réseau (Lot G), live sur Railway. CTA payants → /login (web
+// device flow → cookie → Checkout). Repointer sur api.ghost-memory.com quand le
+// CNAME Cloudflare sera en place.
+const API_BASE = "https://ghost-backend-production-f062.up.railway.app";
 
 export const CONTENT_HTML = `
 <div style="min-height:100vh;background:#0a0a0c;overflow-x:hidden;">

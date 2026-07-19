@@ -93,6 +93,13 @@ First scan… <span class="o">✓</span> N candidate(s) found.</div>
           <div class="doc-cmdrow"><div class="n">ghost why</div><div class="d">Which skills were injectable at the last prompt, and why (triggered by their description).</div></div>
           <div class="doc-cmdrow"><div class="n">ghost disable / enable &lt;id&gt;</div><div class="d">Remove a deployed skill (never injected again) / reactivate it.</div></div>
           <div class="doc-cmdrow"><div class="n">ghost login / upgrade &lt;tier&gt;</div><div class="d">Connect to the network (device flow → Ghost token, never your Anthropic key) / open Stripe Checkout for a paid tier.</div></div>
+          <div class="doc-cmdrow"><div class="n">ghost publish &lt;skill&gt;</div><div class="d">Publish a personal skill to the collective memory. <strong style="color:#dfe9ff;">Mandatory fail-closed secret scan</strong> (shows what's masked) + a diff of exactly what leaves + explicit confirmation. <strong style="color:#dfe9ff;">Private by default</strong>; <code class="inl">--public</code> enters the lift-ranked registry. Lift is measured after and shows in <code class="inl">ghost earnings</code>.</div></div>
+          <div class="doc-cmdrow"><div class="n">ghost usage</div><div class="d">This cycle's consumption: plan, community unlocks used / quota, reset date, progress bar. An unlock = the first time a <em>distinct</em> community skill enters your library; re-using one you already unlocked never re-counts.</div></div>
+          <div class="doc-cmdrow"><div class="n">ghost unlocked</div><div class="d">Community skills unlocked this cycle: slug, author, measured lift (or "not yet measured"), sorted by lift.</div></div>
+          <div class="doc-cmdrow"><div class="n">ghost earnings</div><div class="d">Your revenue-share balance (50% of subscriptions, paid for lift × adoption, €50 threshold): balance, measured impact share, installs generated, average measured lift, distance to threshold, payout status. Honest zero until your skills have measured lift.</div></div>
+          <div class="doc-cmdrow"><div class="n">ghost account / whoami</div><div class="d">One-screen dashboard (plan, usage, earnings, public profile) / quick plan + email.</div></div>
+          <div class="doc-cmdrow"><div class="n">ghost history</div><div class="d">Past payouts: date, amount, status.</div></div>
+          <div class="doc-cmdrow"><div class="n">ghost payout-setup</div><div class="d">Enable payouts — <strong style="color:#dfe9ff;">optional</strong>, only needed to cash out. Opens a secure browser page; no bank details ever pass through the terminal.</div></div>
           <div class="doc-cmdrow"><div class="n">ghost telemetry {status,on,off,preview,send}</div><div class="d">Off by default. <code class="inl">preview</code> prints the exact payload that would be sent. Only aggregate counts — never code, paths, or prompts.</div></div>
         </div>
       </section>
@@ -148,6 +155,19 @@ redactions {env_secret: 1, home_path: 1}</div>
         <div class="doc-code"><span class="c">$ ghost login</span>            <span class="m"># device flow → Ghost token (not your Anthropic key)</span>
 <span class="c">$ ghost upgrade pro</span>      <span class="m"># opens Stripe Checkout for the tier</span></div>
         <p class="doc-p">Tiers: <strong style="color:#dfe9ff;">Free</strong> $0 (5 lifetime unlocks to try) · <strong style="color:#dfe9ff;">Pro</strong> $29/mo (200 unlocks) · <strong style="color:#dfe9ff;">Team</strong> $95/mo (1,000) · <strong style="color:#dfe9ff;">Scale</strong> $195/mo (4,000, private registry) — then usage-based overage. Hitting the quota is a clear message, never a crash: your local retrieve and already-unlocked skills keep working.</p>
+
+        <h3 class="doc-h3">Account &amp; consumption</h3>
+        <p class="doc-p">Read your real account state — computed from live data, never invented. All of these degrade gracefully offline (last-known state, flagged as possibly stale) and never crash.</p>
+        <div class="doc-code"><span class="c">$ ghost usage</span>       <span class="m"># plan, unlocks used / quota, reset, progress bar</span>
+<span class="c">$ ghost unlocked</span>    <span class="m"># community skills unlocked this cycle, by measured lift</span>
+<span class="c">$ ghost account</span>     <span class="m"># one-screen dashboard  ·  ghost whoami for a quick check</span></div>
+
+        <h3 class="doc-h3">Contribute &amp; earn</h3>
+        <p class="doc-p">On a paid plan you don't just use the collective memory — you <em style="font-family:'Instrument Serif',serif;color:#a9c9ff;">earn</em> from it. Publish skills that work and a share of subscription revenue (50%, paid for measured lift × adoption) comes back to you. Publishing runs a mandatory fail-closed secret scan and shows the exact redacted diff before anything leaves; skills are private by default.</p>
+        <div class="doc-code"><span class="c">$ ghost publish my-skill --public</span>   <span class="m"># secret scan + diff + confirm → registry</span>
+<span class="c">$ ghost earnings</span>                   <span class="m"># balance, impact share, distance to €50 threshold</span>
+<span class="c">$ ghost payout-setup</span>               <span class="m"># optional, only to cash out — secure browser page</span></div>
+        <div class="doc-note">Earnings are honestly €0 until your skills have measured lift — the structure reads real data, the numbers follow the measurement as the network grows. See <a href="/earn" style="color:#7fb0ff;">the earn program</a>.</div>
       </section>
 
       <section id="faq" class="doc-sec">

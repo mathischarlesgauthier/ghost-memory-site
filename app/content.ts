@@ -24,6 +24,7 @@ export const CONTENT_HTML = `
           <a href="#process" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;color:#a8bce4;white-space:nowrap;">HOW IT WORKS</a>
           <a href="#pricing" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;color:#a8bce4;white-space:nowrap;">PRICING</a>
           <a href="#objections" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;color:#a8bce4;white-space:nowrap;">OBJECTIONS</a>
+          <a href="/earn" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;color:#f2f6ff;white-space:nowrap;border-bottom:1px solid #8fb8ff;padding-bottom:2px;">EARN</a>
         </nav>
         <div style="display:flex;align-items:center;gap:8px;white-space:nowrap;">
           <a href="/docs" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;border:1px solid rgba(180,205,255,.35);border-radius:3px;padding:7px 12px;color:#c9dcff;" class="gsh1">READ THE DOC</a>
@@ -486,6 +487,22 @@ export const CONTENT_HTML = `
     </div>
   </section>
 
+  <section style="background:#05070d;padding:130px 28px 0;box-sizing:border-box;">
+    <div data-reveal="" style="max-width:1040px;margin:0 auto;background:linear-gradient(135deg,#0a1f4d,#0c1633);border:1px solid rgba(143,184,255,.25);border-radius:8px;padding:52px 44px;display:flex;gap:44px;align-items:center;flex-wrap:wrap;box-shadow:0 30px 90px rgba(0,10,40,.5);">
+      <div style="flex:1;min-width:280px;">
+        <div style="display:flex;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;color:#8fb8ff;"><span style="width:7px;height:7px;background:#8fb8ff;animation:gsPulse 2.2s ease-in-out infinite;"></span><span>EARN — INCLUDED WITH EVERY PAID PLAN</span></div>
+        <h2 style="margin:20px 0 0;font-size:clamp(26px,3vw,38px);font-weight:500;letter-spacing:-0.03em;line-height:1.15;color:#e9f0ff;text-wrap:balance;">A paid plan isn't just a cost — <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#a9c9ff;">it pays you back</em>.</h2>
+        <p style="margin:18px 0 0;max-width:560px;font-size:16px;line-height:1.7;color:#b7c7ea;text-wrap:pretty;">The moment you go paid, you're in the contributor program. Publish skills that work and a share of Ghost&nbsp;Skills' revenue — <strong style="color:#dfe9ff;">50% of subscriptions</strong> — comes back to you, paid for measured lift, not uploads. Used enough, your contributions can earn back more than you pay.</p>
+        <a href="/earn" style="margin-top:26px;display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:600;letter-spacing:.06em;background:#f2f6ff;color:#0a1330;border:1px solid #f2f6ff;border-radius:3px;padding:12px 22px;" class="gsh3">SEE HOW YOU EARN →</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;color:#cfe0ff;min-width:190px;">
+        <span style="border:1px solid rgba(170,200,255,.3);padding:9px 14px;background:rgba(8,16,42,.5);">50% REVENUE SHARED</span>
+        <span style="border:1px solid rgba(170,200,255,.3);padding:9px 14px;background:rgba(8,16,42,.5);">PAID FOR LIFT, NOT UPLOADS</span>
+        <span style="border:1px solid rgba(170,200,255,.3);padding:9px 14px;background:rgba(8,16,42,.5);">MONTHLY PAYOUTS FROM €50</span>
+      </div>
+    </div>
+  </section>
+
   <section id="objections" style="background:#05070d;padding:130px 28px 0;box-sizing:border-box;">
     <div style="max-width:740px;margin:0 auto;">
       <div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
@@ -592,6 +609,7 @@ export const CONTENT_HTML = `
         <a href="#problem" style="color:#8ba0cc;">THE PROBLEM</a>
         <a href="#features" style="color:#8ba0cc;">WHY US</a>
         <a href="#pricing" style="color:#8ba0cc;">PRICING</a>
+        <a href="/earn" style="color:#8ba0cc;">EARN</a>
         <a href="${GITHUB}" target="_blank" rel="noopener" style="color:#8ba0cc;">GITHUB ↗</a>
       </div>
     </div>

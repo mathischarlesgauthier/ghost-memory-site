@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Ghost Memory — fix it once, never twice",
   description:
     "Your coding agent forgets everything between sessions. Ghost Memory reads your history, extracts what you already taught it, and feeds it back at the right moment. Runs on your existing history. Nothing leaves your machine.",
-  icons: { icon: "/ghost-logo.png" },
+  icons: { icon: "/ghost-logo.svg" },
 };
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1 };

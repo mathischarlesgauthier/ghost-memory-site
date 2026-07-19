@@ -1,118 +1,123 @@
-html,body{margin:0;padding:0;background:#0a0a0c;color:#ececf1;font-family:'Geist',system-ui,sans-serif;-webkit-font-smoothing:antialiased;scroll-behavior:smooth;}
-a{color:#ececf1;text-decoration:none;}
-a:hover{color:#7ce38b;}
-::selection{background:rgba(124,227,139,.25);}
 *{box-sizing:border-box;}
-
-@keyframes gbBlink{0%,49%{opacity:1}50%,100%{opacity:0}}
-@keyframes gbFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
-@keyframes gbMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@keyframes gbLine{from{transform:translateY(7px)}to{transform:none}}
-@keyframes gbBar{from{width:0ch}to{width:12ch}}
-@keyframes gbReveal{from{transform:translateY(26px)}to{transform:none}}
-[data-reveal]{animation:gbReveal .8s cubic-bezier(.2,.7,.2,1) both;}
-.gb-term .gb-tl{animation:gbLine .4s ease-out both;}
-.gb-term .gb-tl:nth-child(1){animation-delay:.05s}
-.gb-term .gb-tl:nth-child(2){animation-delay:.45s}
-.gb-term .gb-tl:nth-child(4){animation-delay:1.9s}
-.gb-term .gb-tl:nth-child(5){animation-delay:2.1s}
-.gb-term .gb-tl:nth-child(7){animation-delay:2.4s}
-.gb-term .gb-tl:nth-child(8){animation-delay:2.6s}
-.gb-term .gb-tl:nth-child(9){animation-delay:2.8s}
-.gb-term .gb-tl:nth-child(10){animation-delay:3s}
-.gb-term .gb-tl:nth-child(12){animation-delay:3.5s}
-.gb-bar{display:inline-block;overflow:hidden;white-space:nowrap;vertical-align:bottom;width:12ch;}
-.gb-term .gb-bar{animation:gbBar 1.2s .55s cubic-bezier(.55,.1,.4,.9) both;}
-@keyframes gbGrow{from{width:0}}
-@keyframes gbDemote{0%,55%{opacity:1}100%{opacity:.3}}
-.gb-idx span{height:7px;border-radius:4px;}
-.gb-idx span{animation:gbGrow .9s cubic-bezier(.2,.7,.2,1) both;}
-.gb-idx span:nth-child(1){animation-delay:.15s}
-.gb-idx span:nth-child(2){animation-delay:.3s}
-.gb-idx span:nth-child(3){animation-delay:.45s}
-.gb-idx span:nth-child(4){animation:gbGrow .9s .6s cubic-bezier(.2,.7,.2,1) both, gbDemote 2.6s 1.4s ease both;}
-
-/* Effets :hover portés depuis les attributs style-hover du design */
-.gb-nav-gh:hover{border-color:rgba(124,227,139,.4)!important;color:#7ce38b!important;}
-.gb-copy:hover{background:rgba(124,227,139,.12)!important;border-color:rgba(124,227,139,.35)!important;color:#7ce38b!important;}
-.gb-card:hover{border-color:rgba(124,227,139,.25)!important;}
-.gb-price:hover{transform:translateY(-4px);box-shadow:0 12px 90px rgba(124,227,139,.14);}
-.gb-price-pro:hover{transform:translateY(-4px);box-shadow:0 30px 110px rgba(0,0,0,.65);}
-.gb-btn-free:hover{background:#93efa0!important;}
-.gb-btn-pro:hover{border-color:rgba(124,227,139,.5)!important;color:#7ce38b!important;}
-
-/* Commande d'install (git+https) plus longue que le paquet PyPI : on garde
-   la boîte compacte, la commande défile horizontalement si nécessaire. */
-.gb-cmd{overflow-x:auto;scrollbar-width:none;}
-.gb-cmd::-webkit-scrollbar{display:none;}
-
-/* Accordéon FAQ en CSS pur (details/summary), zéro JS */
-.gb-faq{background:#101014;border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden;}
-.gb-faq>summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;color:#ececf1;font-family:'Geist Mono',monospace;font-size:14.5px;font-weight:500;padding:18px 22px;cursor:pointer;}
-.gb-faq>summary::-webkit-details-marker{display:none;}
-.gb-faq>summary .gb-faq-mark::after{content:'+';color:#62626c;}
-.gb-faq[open]>summary .gb-faq-mark::after{content:'−';}
-.gb-faq-a{padding:0 22px 18px;font-size:14.5px;line-height:1.7;color:#9b9ba4;}
-
-@media (max-width:640px){
-  .gb-nav-links{display:none!important;}
-}
-
-/* ── Mots-clés bénéfice (héros, labels, pricing) ── */
-.gb-benefit{font-family:'Geist Mono',monospace;font-size:12.5px;color:#c9c9d1;background:rgba(124,227,139,.06);border:1px solid rgba(124,227,139,.16);border-radius:999px;padding:5px 12px;letter-spacing:.01em;}
-.gb-kw{color:#7ce38b;}
-
-/* ── Pricing v2 : grille 4 paliers ── */
-.gb-tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px;align-items:stretch;}
-.gb-tier{display:flex;flex-direction:column;background:#0d0d10;border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:24px 22px;transition:border-color .2s,transform .2s;}
-.gb-tier:hover{border-color:rgba(124,227,139,.22);transform:translateY(-3px);}
-.gb-tier-pro{border-color:rgba(124,227,139,.35);box-shadow:0 0 90px rgba(124,227,139,.06);}
-.gb-tier h3{margin:0;font-size:15px;font-weight:600;color:#ececf1;}
-.gb-tier .gb-price-tag{font-family:'Geist Mono',monospace;font-size:30px;font-weight:600;color:#ececf1;margin:12px 0 2px;letter-spacing:-0.02em;}
-.gb-tier .gb-price-tag span{font-size:13px;font-weight:400;color:#62626c;}
-.gb-tier .gb-tagline{font-size:13px;color:#9b9ba4;min-height:34px;line-height:1.4;}
-.gb-tier ul{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:9px;flex:1;}
-.gb-tier li{font-size:13px;line-height:1.5;color:#c9c9d1;display:flex;gap:8px;}
-.gb-tier li .gb-check{color:#7ce38b;flex-shrink:0;}
-.gb-tier .gb-tier-cta{margin-top:20px;display:block;text-align:center;font-family:'Geist Mono',monospace;font-size:13px;border-radius:7px;padding:10px 12px;border:1px solid rgba(255,255,255,.14);color:#ececf1;transition:all .2s;}
-.gb-tier .gb-tier-cta:hover{border-color:rgba(124,227,139,.4);color:#7ce38b;}
-.gb-tier-cta-primary{background:#7ce38b!important;color:#07130a!important;border-color:#7ce38b!important;font-weight:600;}
-.gb-tier-cta-primary:hover{background:#93efa0!important;color:#07130a!important;}
-@media (max-width:900px){.gb-tiers{grid-template-columns:repeat(2,1fr);}}
-@media (max-width:520px){.gb-tiers{grid-template-columns:1fr;}}
-
-/* ── Lift section (What is lift) — animation scroll en CSS pur ── */
-.gb-illus{display:inline-block;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;color:#8a8a94;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.03);border-radius:999px;padding:5px 13px;}
-.gb-lift-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:30px;align-items:center;margin-top:30px;}
-.gb-lift-col{display:flex;flex-direction:column;}
-.gb-lift-cap{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;color:#62626c;}
-.gb-lift-n{font-family:'Geist Mono',monospace;font-size:28px;font-weight:600;color:#ececf1;margin-top:6px;line-height:1;}
-.gb-lift-n span{font-size:13px;font-weight:400;color:#62626c;letter-spacing:.04em;}
-.gb-lift-bars{display:flex;flex-direction:column;gap:6px;margin:16px 0;}
-.gb-lift-bar{height:8px;border-radius:3px;background:#1a1a20;overflow:hidden;}
-.gb-lift-bar>i{display:block;height:100%;width:100%;border-radius:3px;transform:scaleX(1);transform-origin:left;}
-.gb-lift-status{font-family:'Geist Mono',monospace;font-size:13px;margin-top:2px;}
-.gb-lift-pct{font-family:'Geist Mono',monospace;font-size:clamp(38px,5.5vw,62px);font-weight:600;color:#7ce38b;letter-spacing:-0.03em;line-height:1;}
-.gb-lift-pct-sub{font-family:'Geist Mono',monospace;font-size:12px;color:#62626c;margin-top:8px;letter-spacing:.02em;}
-@keyframes gbFill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-/* Repli : hors support de view(), les barres restent à leur état final (scaleX 1),
-   donc lisibles partout et sur screenshot. Là où view() existe, elles se
-   remplissent au scroll ; "with" (pas 2%) finit avant "without" (pas 4.4%). */
-@supports (animation-timeline: view()){
-  .gb-lift-anim .gb-lift-bar>i{transform:scaleX(0);animation:gbFill 1s linear both;animation-timeline:view();}
-  .gb-lift-anim .gb-lift-without .gb-lift-bar>i{animation-range:entry calc(6% + (var(--i,0) * 4.4%)) entry calc(20% + (var(--i,0) * 4.4%));}
-  .gb-lift-anim .gb-lift-with .gb-lift-bar>i{animation-range:entry calc(6% + (var(--i,0) * 2%)) entry calc(18% + (var(--i,0) * 2%));}
-}
-@media (max-width:760px){
-  .gb-lift-grid{grid-template-columns:1fr;gap:22px;text-align:center;}
-  .gb-lift-col{align-items:center;}
-  .gb-lift-bars{width:100%;max-width:320px;}
-}
-
+html,body{margin:0;padding:0;background:#05070d;color:#e8ecf4;font-family:'Archivo',system-ui,sans-serif;-webkit-font-smoothing:antialiased;scroll-behavior:smooth;}
+a{color:inherit;text-decoration:none;}
+a:hover{color:#7fb0ff;}
+::selection{background:rgba(127,176,255,.3);}
+@keyframes gsBlink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes gsFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes gsMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes gsLine{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+@keyframes gsBar{from{width:0ch}to{width:12ch}}
+@keyframes gsDraw{to{stroke-dashoffset:0}}
+@keyframes gsCheck{0%{stroke-dashoffset:1}30%{stroke-dashoffset:0}72%{stroke-dashoffset:0}100%{stroke-dashoffset:-1}}
+@keyframes gsMarch{to{stroke-dashoffset:-1}}
+@keyframes gsWiggle{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
+@keyframes gsBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes gsBubble{0%{transform:translateY(0);opacity:0}25%{opacity:.75}100%{transform:translateY(-30px);opacity:0}}
+@keyframes gsSpark{0%,100%{opacity:.15;transform:scale(.7)}50%{opacity:1;transform:scale(1.15)}}
+@keyframes gsX{0%{stroke-dashoffset:1}28%{stroke-dashoffset:0}82%{stroke-dashoffset:0}100%{stroke-dashoffset:1}}
+@keyframes gsDrop{0%{transform:translateY(0);opacity:0}18%{opacity:.9}85%{transform:translateY(24px);opacity:0}100%{opacity:0}}
+@keyframes gsFadeLoop{0%,100%{opacity:0}40%,70%{opacity:.85}}
+@keyframes gsPop{from{transform:scale(0)}to{transform:scale(1)}}
+@keyframes gsPulse{0%,100%{opacity:.35}50%{opacity:1}}
+@keyframes gsScrollNudge{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+.js [data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);}
+[data-reveal][data-in="1"]{opacity:1;transform:none;}
+[data-reveal="2"]{transition-delay:.12s}[data-reveal="3"]{transition-delay:.24s}[data-reveal="4"]{transition-delay:.36s}
+.js .gs-d{stroke-dasharray:1;stroke-dashoffset:1;}
+[data-in="1"] .gs-d{animation:gsDraw .9s ease forwards;}
+[data-in="1"] .gs-t1{animation-delay:.15s}[data-in="1"] .gs-t2{animation-delay:.4s}[data-in="1"] .gs-t3{animation-delay:.7s}[data-in="1"] .gs-t4{animation-delay:1s}[data-in="1"] .gs-t5{animation-delay:1.3s}[data-in="1"] .gs-t6{animation-delay:1.7s}[data-in="1"] .gs-t7{animation-delay:2.1s}[data-in="1"] .gs-t8{animation-delay:2.5s}[data-in="1"] .gs-t9{animation-delay:2.9s}
+.js [data-term] .gs-tl{opacity:0;}
+[data-term][data-in="1"] .gs-tl{animation:gsLine .4s ease-out both;}
+[data-term][data-in="1"] .gs-tl:nth-child(1){animation-delay:.05s}
+[data-term][data-in="1"] .gs-tl:nth-child(2){animation-delay:.45s}
+[data-term][data-in="1"] .gs-tl:nth-child(4){animation-delay:1.9s}
+[data-term][data-in="1"] .gs-tl:nth-child(5){animation-delay:2.1s}
+[data-term][data-in="1"] .gs-tl:nth-child(7){animation-delay:2.4s}
+[data-term][data-in="1"] .gs-tl:nth-child(8){animation-delay:2.6s}
+[data-term][data-in="1"] .gs-tl:nth-child(9){animation-delay:2.8s}
+[data-term][data-in="1"] .gs-tl:nth-child(10){animation-delay:3s}
+[data-term][data-in="1"] .gs-tl:nth-child(12){animation-delay:3.5s}
+.gs-bar{display:inline-block;overflow:hidden;white-space:nowrap;vertical-align:bottom;width:12ch;}
+[data-term][data-in="1"] .gs-bar{animation:gsBar 1.2s .55s cubic-bezier(.55,.1,.4,.9) both;}
+.js .gs-sq{transform:scale(0);}
+[data-in="1"] .gs-sq{animation:gsPop .4s cubic-bezier(.3,1.4,.5,1) both;}
+[data-in="1"] .gs-sq:nth-child(1){animation-delay:.05s}[data-in="1"] .gs-sq:nth-child(2){animation-delay:.12s}[data-in="1"] .gs-sq:nth-child(3){animation-delay:.19s}[data-in="1"] .gs-sq:nth-child(4){animation-delay:.26s}[data-in="1"] .gs-sq:nth-child(5){animation-delay:.33s}[data-in="1"] .gs-sq:nth-child(6){animation-delay:.4s}[data-in="1"] .gs-sq:nth-child(7){animation-delay:.47s}[data-in="1"] .gs-sq:nth-child(8){animation-delay:.54s}[data-in="1"] .gs-sq:nth-child(9){animation-delay:.61s}[data-in="1"] .gs-sq:nth-child(10){animation-delay:.68s}[data-in="1"] .gs-sq:nth-child(11){animation-delay:.75s}[data-in="1"] .gs-sq:nth-child(12){animation-delay:.82s}[data-in="1"] .gs-sq:nth-child(13){animation-delay:.89s}[data-in="1"] .gs-sq:nth-child(14){animation-delay:.96s}
 @media (prefers-reduced-motion: reduce){
-  [data-reveal],.gb-idx span{opacity:1 !important;transform:none !important;animation:none !important;}
-  .gb-term .gb-tl{opacity:1;animation:none !important;}
-  .gb-bar{animation:none !important;}
-  .gb-lift-bar>i{animation:none !important;transform:scaleX(1) !important;}
+  [data-reveal]{opacity:1 !important;transform:none !important;transition:none !important;}
+  .gs-tl,.gs-sq{opacity:1 !important;transform:none !important;animation:none !important;}
+  .gs-d{stroke-dashoffset:0 !important;}
+  .gs-bar{animation:none !important;}
   *{animation-duration:.01s !important;}
 }
+
+/* ── Effets :hover portés depuis style-hover ── */
+.gsh1:hover{background:#e8efff;color:#0a1330;border-color:#e8efff;}
+.gsh2:hover{background:#e8efff;color:#0a1330;border-color:#e8efff;}
+.gsh3:hover{background:#c9dcff;border-color:#c9dcff;}
+.gsh4:hover{border-color:#e8efff;color:#ffffff;}
+.gsh5:hover{background:#e8efff;color:#0a1330;}
+.gsh6:hover{background:#eceded;}
+.gsh7:hover{background:#eceded;}
+.gsh8:hover{background:#eceded;}
+.gsh9:hover{background:#eceded;}
+.gsh10:hover{background:#eceded;}
+.gsh11:hover{background:#eceded;}
+.gsh12:hover{background:#eceded;}
+.gsh13:hover{background:#eceded;}
+.gsh14:hover{border-color:rgba(160,190,255,.25);}
+.gsh15:hover{box-shadow:0 0 90px rgba(60,110,220,.18);}
+.gsh16:hover{transform:translateY(-5px);}
+.gsh17:hover{background:#2453c4;border-color:#2453c4;}
+.gsh18:hover{transform:translateY(-5px);}
+.gsh19:hover{background:#c9dcff;border-color:#c9dcff;color:#0c1633;}
+.gsh20:hover{transform:translateY(-5px);}
+.gsh21:hover{background:#10141f;color:#f2f6ff;}
+.gsh22:hover{transform:translateY(-5px);}
+.gsh23:hover{background:#10141f;color:#f2f6ff;}
+.gsh24:hover{transform:translateY(-4px);}
+.gsh25:hover{transform:translateY(-4px);}
+.gsh26:hover{transform:translateY(-4px);}
+.gsh27:hover{color:#c9dcff;}
+.gsh28:hover{border-color:rgba(36,83,196,.5);}
+.gsh29:hover{border-color:rgba(36,83,196,.5);}
+.gsh30:hover{border-color:rgba(36,83,196,.5);}
+.gsh31:hover{background:#e8efff;color:#0a1330;}
+
+/* Accordéon FAQ (CSS pur, details/summary) — style v7 */
+.gs-faq{background:#080b14;border:1px solid rgba(160,190,255,.14);border-radius:4px;overflow:hidden;}
+.gs-faq>summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;color:#e9f0ff;font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:500;text-align:left;padding:18px 22px;cursor:pointer;}
+.gs-faq>summary::-webkit-details-marker{display:none;}
+.gs-faq>summary:hover{color:#7fb0ff;}
+.gs-faq>summary .gs-faq-mark::after{content:'+';color:#5d6f9c;}
+.gs-faq[open]>summary .gs-faq-mark::after{content:'\2212';}
+.gs-faq-a{padding:0 22px 18px;font-size:14.5px;line-height:1.7;color:#9cb4e2;text-wrap:pretty;}
+
+/* Responsive : nav centrale masquée sur petits écrans */
+@media (max-width:860px){ .gs-nav-links{display:none !important;} }
+
+/* ── Page /docs ── */
+.doc-wrap{display:grid;grid-template-columns:220px 1fr;gap:52px;max-width:1180px;margin:0 auto;padding:52px 28px 130px;box-sizing:border-box;}
+.doc-side{position:sticky;top:26px;align-self:start;display:flex;flex-direction:column;gap:2px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.02em;}
+.doc-side .grp{color:#5d6f9c;letter-spacing:.14em;font-size:10.5px;margin:18px 0 6px;}
+.doc-side a{color:#8ba0cc;padding:4px 0;border-left:2px solid transparent;padding-left:10px;margin-left:-12px;}
+.doc-side a:hover{color:#cfe0ff;border-left-color:#2453c4;}
+.doc-main{min-width:0;}
+.doc-sec{margin-top:64px;scroll-margin-top:24px;}
+.doc-eyebrow{display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:#8ba0cc;}
+.doc-eyebrow span.dot{width:7px;height:7px;background:#8fb8ff;flex-shrink:0;}
+.doc-h2{font-size:clamp(26px,3vw,40px);font-weight:500;letter-spacing:-0.03em;line-height:1.12;color:#e9f0ff;margin:18px 0 0;text-wrap:balance;}
+.doc-h3{font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:600;color:#dfe9ff;margin:34px 0 0;letter-spacing:.01em;}
+.doc-p{font-size:15.5px;line-height:1.78;color:#b7c7ea;margin:14px 0 0;max-width:740px;text-wrap:pretty;}
+.doc-code{background:#080b14;border:1px solid rgba(160,190,255,.14);border-radius:5px;padding:16px 18px;font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:1.75;color:#dfe9ff;overflow-x:auto;margin:16px 0 0;white-space:pre;}
+.doc-code .c{color:#8fb8ff;}
+.doc-code .m{color:#5d6f9c;}
+.doc-code .o{color:#a9c9ff;}
+code.inl{font-family:'IBM Plex Mono',monospace;font-size:.85em;background:rgba(150,185,255,.12);border:1px solid rgba(150,185,255,.14);border-radius:3px;padding:2px 7px;color:#cfe0ff;white-space:nowrap;}
+.doc-note{margin-top:16px;border-left:2px solid #2453c4;padding:6px 0 6px 16px;font-size:14px;line-height:1.7;color:#9cb4e2;max-width:720px;}
+.doc-cmdlist{margin:18px 0 0;border:1px solid rgba(160,190,255,.14);border-radius:5px;overflow:hidden;}
+.doc-cmdrow{padding:18px 20px;border-bottom:1px solid rgba(160,190,255,.09);}
+.doc-cmdrow:last-child{border-bottom:none;}
+.doc-cmdrow .n{font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:#8fb8ff;}
+.doc-cmdrow .d{margin:7px 0 0;font-size:14px;line-height:1.65;color:#a8bce4;}
+@media (max-width:840px){ .doc-wrap{grid-template-columns:1fr;gap:0;} .doc-side{display:none;} }

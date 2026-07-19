@@ -8,7 +8,7 @@ export const DOCS_HTML = `
   <header style="position:sticky;top:0;z-index:50;background:rgba(5,7,13,.82);backdrop-filter:blur(12px);border-bottom:1px solid rgba(160,190,255,.1);">
     <div style="display:flex;align-items:center;gap:16px;max-width:1180px;margin:0 auto;padding:16px 28px;box-sizing:border-box;">
       <a href="/" style="display:flex;align-items:center;gap:9px;">
-        <img src="/ghost-logo.svg" alt="Ghost Skills" style="width:22px;height:auto;">
+        <img src="/ghost-logo.png" alt="Ghost Skills" style="width:22px;height:auto;">
         <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;color:#f2f6ff;">Ghost Skills</span>
         <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:#5d6f9c;border-left:1px solid rgba(160,190,255,.2);padding-left:12px;">DOCS</span>
       </a>

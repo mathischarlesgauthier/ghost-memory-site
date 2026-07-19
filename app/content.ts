@@ -11,12 +11,11 @@ export const CONTENT_HTML = `
     
     <div style="position:absolute;inset:0;background:radial-gradient(90% 50% at 50% 108%,rgba(140,190,255,.35),transparent 70%);pointer-events:none;"></div>
 
-    <div style="position:relative;text-align:center;padding:9px 16px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.06em;color:#9cb8e8;border-bottom:1px solid rgba(140,180,255,.14);background:rgba(4,8,18,.5);">EARLY ACCESS — THE COLLECTIVE MEMORY IS JUST GETTING SEEDED. YOUR CONTRIBUTIONS SEED IT.</div>
 
     <header style="position:relative;z-index:5;">
       <div style="display:flex;align-items:center;gap:16px;max-width:1360px;margin:0 auto;padding:18px 28px;box-sizing:border-box;">
         <a href="#hero" style="display:flex;align-items:center;gap:9px;white-space:nowrap;">
-          <img src="/ghost-logo.svg" alt="Ghost Skills" style="width:24px;height:auto;display:block;filter:drop-shadow(0 3px 8px rgba(0,0,20,.5));">
+          <img src="/ghost-logo.png" alt="Ghost Skills" style="width:24px;height:auto;display:block;filter:drop-shadow(0 3px 8px rgba(0,0,20,.5));">
           <span style="font-family:'IBM Plex Mono',monospace;font-size:13.5px;font-weight:600;letter-spacing:.02em;color:#f2f6ff;">Ghost Skills</span>
         </a>
         <nav class="gs-nav-links" style="display:flex;gap:18px;flex:1;justify-content:center;flex-wrap:wrap;">
@@ -65,7 +64,7 @@ export const CONTENT_HTML = `
       <p data-reveal="" style="margin:0;font-size:clamp(24px,3.2vw,38px);font-weight:500;letter-spacing:-0.02em;line-height:1.35;color:#eaf1ff;text-wrap:balance;"><span data-count="670000" style="font-family:'IBM Plex Mono',monospace;">670,000</span> skills out there, ranked by download count. A number you can buy. It tells you nothing.</p>
       <p data-reveal="2" style="margin:30px 0 0;max-width:640px;font-size:18px;line-height:1.7;color:#a9bce6;text-wrap:pretty;">Ghost Skills ranks by <em style="font-family:'Instrument Serif',serif;font-style:italic;color:#cfe0ff;">lift</em> — how much a skill actually improves a real task, measured by rerunning it.</p>
       <p data-reveal="3" style="margin:44px 0 0;font-family:'IBM Plex Mono',monospace;font-size:clamp(20px,2.6vw,30px);letter-spacing:.02em;color:#dfe9ff;">We don't count. We measure.<span style="display:inline-block;width:10px;height:24px;background:#8fb8ff;margin-left:10px;vertical-align:-3px;animation:gsBlink 1.1s steps(1) infinite;"></span></p>
-      <img data-reveal="3" src="/ghost-logo.svg" alt="" style="margin-top:64px;width:104px;height:auto;animation:gsFloat 5s ease-in-out infinite;filter:drop-shadow(0 18px 44px rgba(0,10,40,.65));">
+      <img data-reveal="3" src="/ghost-logo.png" alt="" style="margin-top:64px;width:104px;height:auto;animation:gsFloat 5s ease-in-out infinite;filter:drop-shadow(0 18px 44px rgba(0,10,40,.65));">
       <div style="margin-top:8px;width:2px;height:110px;background:linear-gradient(180deg,rgba(143,184,255,.9),transparent);animation:gsPulse 3s ease-in-out infinite;"></div>
     </div>
   </section>
@@ -98,18 +97,18 @@ export const CONTENT_HTML = `
   <section style="margin-top:100px;border-top:1px solid rgba(160,190,255,.1);border-bottom:1px solid rgba(160,190,255,.1);background:#060a14;overflow:hidden;">
     <div style="display:flex;width:max-content;animation:gsMarquee 55s linear infinite;padding:17px 0;">
       <div style="display:flex;align-items:center;gap:40px;padding-right:40px;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.03em;color:#8ba0cc;white-space:nowrap;">
-        <span>Ghost Skills reads your scars.</span><img src="/ghost-logo.svg" alt="" style="width:17px;height:auto;opacity:.65;">
-        <span>Every correction you make: paid once, reused forever.</span><img src="/ghost-logo.svg" alt="" style="width:17px;height:auto;opacity:.65;">
-        <span>Your agent doesn't need a bigger brain. It needs a memory.</span><img src="/ghost-logo.svg" alt="" style="width:17px;height:auto;opacity:.65;">
-        <span>The knowledge isn't in the docs. It's in the 7 times it broke before it worked.</span><img src="/ghost-logo.svg" alt="" style="width:17px;height:auto;opacity:.65;">
-        <span>Nobody writes skills. That's the whole problem — and why Ghost Skills writes them for you.</span><img src="/ghost-logo.svg" alt="" style="width:17px;height:auto;opacity:.65;">
+        <span>Ghost Skills reads your scars.</span><img src="/ghost-logo.png" alt="" style="width:17px;height:auto;opacity:.65;">
+        <span>Every correction you make: paid once, reused forever.</span><img src="/ghost-logo.png" alt="" style="width:17px;height:auto;opacity:.65;">
+        <span>Your agent doesn't need a bigger brain. It needs a memory.</span><img src="/ghost-logo.png" alt="" style="width:17px;height:auto;opacity:.65;">
+        <span>The knowledge isn't in the docs. It's in the 7 times it broke before it worked.</span><img src="/ghost-logo.png" alt="" style="width:17px;height:auto;opacity:.65;">
+        <span>Nobody writes skills. That's the whole problem — and why Ghost Skills writes them for you.</span><img src="/ghost-logo.png" alt="" style="width:17px;height:auto;opacity:.65;">
       </div>
       <div style="display:flex;align-items:center;gap:40px;padding-right:40px;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.03em;color:#8ba0cc;white-space:nowrap;">
-        <span>Ghost Skills reads your scars.</span><img src="/ghost-logo.svg" alt="" style="width:17px;height:auto;opacity:.65;">
-        <span>Every correction you make: paid once, reused forever.</span><img src="/ghost-logo.svg" alt="" style="width:17px;height:auto;opacity:.65;">
-        <span>Your agent doesn't need a bigger brain. It needs a memory.</span><img src="/ghost-logo.svg" alt="" style="width:17px;height:auto;opacity:.65;">
-        <span>The knowledge isn't in the docs. It's in the 7 times it broke before it worked.</span><img src="/ghost-logo.svg" alt="" style="width:17px;height:auto;opacity:.65;">
-        <span>Nobody writes skills. That's the whole problem — and why Ghost Skills writes them for you.</span><img src="/ghost-logo.svg" alt="" style="width:17px;height:auto;opacity:.65;">
+        <span>Ghost Skills reads your scars.</span><img src="/ghost-logo.png" alt="" style="width:17px;height:auto;opacity:.65;">
+        <span>Every correction you make: paid once, reused forever.</span><img src="/ghost-logo.png" alt="" style="width:17px;height:auto;opacity:.65;">
+        <span>Your agent doesn't need a bigger brain. It needs a memory.</span><img src="/ghost-logo.png" alt="" style="width:17px;height:auto;opacity:.65;">
+        <span>The knowledge isn't in the docs. It's in the 7 times it broke before it worked.</span><img src="/ghost-logo.png" alt="" style="width:17px;height:auto;opacity:.65;">
+        <span>Nobody writes skills. That's the whole problem — and why Ghost Skills writes them for you.</span><img src="/ghost-logo.png" alt="" style="width:17px;height:auto;opacity:.65;">
       </div>
     </div>
   </section>
@@ -341,7 +340,7 @@ export const CONTENT_HTML = `
 
   <section style="background:#05070d;padding:150px 28px 0;box-sizing:border-box;">
     <div style="max-width:780px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;">
-      <img data-reveal="" src="/ghost-logo.svg" alt="" style="width:52px;height:auto;animation:gsFloat 5s ease-in-out infinite;filter:drop-shadow(0 10px 28px rgba(0,5,25,.7));">
+      <img data-reveal="" src="/ghost-logo.png" alt="" style="width:52px;height:auto;animation:gsFloat 5s ease-in-out infinite;filter:drop-shadow(0 10px 28px rgba(0,5,25,.7));">
       <h2 data-reveal="2" style="margin:30px 0 0;font-size:clamp(32px,4.2vw,52px);font-weight:500;letter-spacing:-0.03em;line-height:1.1;color:#e9f0ff;text-wrap:balance;">You already paid for your scars.<br><em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#a9c9ff;">You haven't paid for theirs.</em></h2>
       <p data-reveal="3" style="margin:36px 0 0;max-width:620px;font-size:17.5px;line-height:1.75;color:#9cb4e2;text-wrap:pretty;">Your own history only gives you back what you already learned the hard way. Useful — you never pay for it twice. But you already took the hit.</p>
       <p data-reveal="3" style="margin:22px 0 0;max-width:620px;font-size:17.5px;line-height:1.75;color:#cfd8ec;text-wrap:pretty;">The wall you'll hit next Thursday, someone already hit it. Their scar is distilled, measured, and waiting.</p>
@@ -405,7 +404,7 @@ export const CONTENT_HTML = `
         <div data-reveal="2" style="background:#0c1633;border:1px solid #0c1633;border-radius:4px;padding:32px 28px;display:flex;flex-direction:column;color:#e9f0ff;box-shadow:0 26px 70px rgba(10,20,60,.35);transition:transform .3s ease;" class="gsh18">
           <div style="display:flex;justify-content:space-between;align-items:center;">
             <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;color:#8fb8ff;">PRO</div>
-            <img src="/ghost-logo.svg" alt="" style="width:22px;height:auto;animation:gsFloat 4s ease-in-out infinite;">
+            <img src="/ghost-logo.png" alt="" style="width:22px;height:auto;animation:gsFloat 4s ease-in-out infinite;">
           </div>
           <div style="margin-top:14px;font-size:38px;font-weight:500;letter-spacing:-0.03em;">$29 <span style="font-size:14px;font-weight:400;color:#8ba0cc;">/ mo</span></div>
           <p style="margin:12px 0 0;font-family:'IBM Plex Mono',monospace;font-size:13px;color:#8fb8ff;">The collective memory</p>
@@ -459,14 +458,14 @@ export const CONTENT_HTML = `
       <div style="margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;align-items:start;">
         <div data-reveal="" style="background:#f5f5f4;border:1px solid rgba(16,20,31,.18);border-radius:4px;padding:26px;display:flex;flex-direction:column;gap:16px;transition:transform .3s ease;" class="gsh24">
           <div style="display:flex;align-items:center;gap:11px;">
-            <img src="/ghost-logo.svg" alt="" style="width:30px;height:auto;">
+            <img src="/ghost-logo.png" alt="" style="width:30px;height:auto;">
             <span><span style="display:block;font-size:14px;font-weight:600;">Ghost Skills</span><span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5a6170;">@ghostskills</span></span>
           </div>
           <p style="margin:0;font-size:14.5px;line-height:1.7;color:#3c4356;text-wrap:pretty;">Your coding agent has goldfish memory.<br>Monday you teach it something. Thursday it makes the same mistake.<br><br>I built Ghost Skills: it reads your session history, pulls out what you already taught it, and feeds it back automatically.<br><br><span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#2453c4;">uv tool install git+github.com/…/ghost-memory</span> — runs on your existing history.</p>
         </div>
         <div data-reveal="2" style="background:#f5f5f4;border:1px solid rgba(16,20,31,.18);border-radius:4px;padding:26px;display:flex;flex-direction:column;gap:16px;transition:transform .3s ease;" class="gsh25">
           <div style="display:flex;align-items:center;gap:11px;">
-            <img src="/ghost-logo.svg" alt="" style="width:30px;height:auto;">
+            <img src="/ghost-logo.png" alt="" style="width:30px;height:auto;">
             <span><span style="display:block;font-size:14px;font-weight:600;">Ghost Skills</span><span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5a6170;">@ghostskills</span></span>
           </div>
           <p style="margin:0;font-size:14.5px;line-height:1.7;color:#3c4356;text-wrap:pretty;">I pointed it at my own 412 Claude Code sessions.<br><br>47 skill candidates. 312 failure loops. 89 times I had to correct it by hand.<br><br>Six months of scars, sitting there, unused.</p>
@@ -478,7 +477,7 @@ export const CONTENT_HTML = `
         </div>
         <div data-reveal="3" style="background:#f5f5f4;border:1px solid rgba(16,20,31,.18);border-radius:4px;padding:26px;display:flex;flex-direction:column;gap:16px;transition:transform .3s ease;" class="gsh26">
           <div style="display:flex;align-items:center;gap:11px;">
-            <img src="/ghost-logo.svg" alt="" style="width:30px;height:auto;">
+            <img src="/ghost-logo.png" alt="" style="width:30px;height:auto;">
             <span><span style="display:block;font-size:14px;font-weight:600;">Ghost Skills</span><span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#5a6170;">@ghostskills</span></span>
           </div>
           <p style="margin:0;font-size:14.5px;line-height:1.7;color:#3c4356;text-wrap:pretty;">Nobody writes agent skills because writing one is 2 hours of unpaid work.<br><br>That's why 80% of the 670k public skills are slop.<br><br>So we stopped asking people to write them. We extract them from what you already did.</p>
@@ -568,7 +567,7 @@ export const CONTENT_HTML = `
   <section style="position:relative;background:linear-gradient(180deg,#05070d 0%,#0a1f4d 55%,#1c4bb0 100%);padding:150px 28px 130px;box-sizing:border-box;overflow:hidden;">
     <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(150,190,255,.28) 1.2px,transparent 1.2px);background-size:16px 16px;mask-image:linear-gradient(180deg,transparent,black 60%);-webkit-mask-image:linear-gradient(180deg,transparent,black 60%);pointer-events:none;"></div>
     <div style="max-width:820px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;">
-      <img data-reveal="" src="/ghost-logo.svg" alt="" style="width:74px;height:auto;animation:gsFloat 5s ease-in-out infinite;filter:drop-shadow(0 14px 36px rgba(0,5,25,.7));">
+      <img data-reveal="" src="/ghost-logo.png" alt="" style="width:74px;height:auto;animation:gsFloat 5s ease-in-out infinite;filter:drop-shadow(0 14px 36px rgba(0,5,25,.7));">
       <h2 data-reveal="2" style="margin:26px 0 0;font-size:clamp(30px,4vw,50px);font-weight:500;letter-spacing:-0.03em;line-height:1.12;color:#e9f0ff;text-wrap:balance;">Six months of debugging. None of it saved.<br><em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#a9c9ff;">Until now.</em></h2>
       <p data-reveal="3" style="margin:18px 0 0;font-size:16px;color:#b7c7ea;max-width:480px;line-height:1.65;">Turns your coding history into skills your agent actually uses.</p>
       <div data-reveal="3" style="margin-top:34px;display:flex;align-items:center;gap:14px;background:rgba(5,10,26,.75);border:1px solid rgba(150,185,255,.3);border-radius:4px;padding:13px 16px 13px 18px;font-family:'IBM Plex Mono',monospace;font-size:13.5px;max-width:92vw;">
@@ -584,7 +583,7 @@ export const CONTENT_HTML = `
     <div style="max-width:1240px;margin:0 auto;padding:52px 36px 44px;box-sizing:border-box;display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap;">
       <div style="display:flex;flex-direction:column;gap:14px;max-width:440px;">
         <span style="display:flex;align-items:center;gap:10px;">
-          <img src="/ghost-logo.svg" alt="Ghost Skills" style="width:22px;height:auto;">
+          <img src="/ghost-logo.png" alt="Ghost Skills" style="width:22px;height:auto;">
           <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600;color:#e9f0ff;">Ghost Skills</span>
         </span>
         <p style="margin:0;font-size:12.5px;line-height:1.8;color:#5d6f9c;text-wrap:pretty;">Operated by Ghost World Society, a company incorporated in Delaware, USA. © 2026 Ghost World Society. All rights reserved.</p>

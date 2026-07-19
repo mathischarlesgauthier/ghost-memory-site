@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Ghost Skills — the collective memory for coding agents",
   description:
     "Ghost Skills taps the collective memory of thousands of developers — the fixes, the shortcuts, the traps they learned the hard way — and feeds the right one into your agent as you code. Ranked by what actually works. Measured, not upvoted.",
-  icons: { icon: "/ghost-logo.svg" },
+  icons: { icon: "/ghost-logo.png" },
 };
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1 };

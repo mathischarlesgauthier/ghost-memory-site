@@ -52,6 +52,22 @@ function ghostCopy(btn){
   if(document.readyState!=='loading')start();
   else document.addEventListener('DOMContentLoaded',start);
 })();
+(function(){
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce)return;
+  function initTabs(){
+    var rs=['gsph0','gsph1','gsph2'].map(function(id){return document.getElementById(id);});
+    if(rs.some(function(r){return !r;}))return;
+    var timer;
+    function advance(){var i=0;for(var k=0;k<rs.length;k++){if(rs[k].checked){i=k;break;}}
+      rs[(i+1)%rs.length].checked=true;}
+    function schedule(){clearInterval(timer);timer=setInterval(advance,6000);}
+    rs.forEach(function(r){r.addEventListener('change',schedule);});
+    schedule();
+  }
+  if(document.readyState!=='loading')initTabs();
+  else document.addEventListener('DOMContentLoaded',initTabs);
+})();
 `;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

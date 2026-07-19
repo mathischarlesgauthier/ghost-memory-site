@@ -85,6 +85,25 @@ a:hover{color:#7fb0ff;}
 .gsh30:hover{border-color:rgba(36,83,196,.5);}
 .gsh31:hover{background:#e8efff;color:#0a1330;}
 
+/* ── Panneau à onglets « Triple gain » (radios CSS + auto-advance JS) ── */
+@keyframes gsRing{0%{transform:scale(.4);opacity:.8}100%{transform:scale(1.5);opacity:0}}
+@keyframes gsTabFill{from{width:0}to{width:100%}}
+.gs-ph-radio{position:absolute;width:0;height:0;opacity:0;pointer-events:none;}
+.gs-ph-tab{position:relative;overflow:hidden;background:none;border:none;cursor:pointer;flex:1;min-width:120px;padding:15px 10px 17px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:#5d6f9c;border-right:1px solid rgba(160,190,255,.1);transition:color .3s,background .3s;text-align:center;}
+.gs-ph-tab:hover{color:#c9dcff;}
+.gs-ph-tab i{position:absolute;left:0;bottom:0;height:2px;width:0;background:#8fb8ff;font-style:normal;}
+.gs-ph-panel{position:absolute;inset:0;opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease;pointer-events:none;}
+#gsph0:checked~.gs-ph-bar label[for="gsph0"],
+#gsph1:checked~.gs-ph-bar label[for="gsph1"],
+#gsph2:checked~.gs-ph-bar label[for="gsph2"]{color:#e9f0ff;background:rgba(143,184,255,.08);}
+#gsph0:checked~.gs-ph-bar label[for="gsph0"] i,
+#gsph1:checked~.gs-ph-bar label[for="gsph1"] i,
+#gsph2:checked~.gs-ph-bar label[for="gsph2"] i{animation:gsTabFill 6s linear both;}
+#gsph0:checked~.gs-ph-stage [data-panel="0"],
+#gsph1:checked~.gs-ph-stage [data-panel="1"],
+#gsph2:checked~.gs-ph-stage [data-panel="2"]{opacity:1;transform:none;pointer-events:auto;}
+@media (max-width:820px){.gs-ph-art{display:none !important;}}
+
 /* Accordéon FAQ (CSS pur, details/summary) — style v7 */
 .gs-faq{background:#080b14;border:1px solid rgba(160,190,255,.14);border-radius:4px;overflow:hidden;}
 .gs-faq>summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;color:#e9f0ff;font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:500;text-align:left;padding:18px 22px;cursor:pointer;}

@@ -114,6 +114,181 @@ export const CONTENT_HTML = `
     </div>
   </section>
 
+  <section id="triple" style="background:#05070d;padding:110px 28px;box-sizing:border-box;">
+    <div style="max-width:1160px;margin:0 auto;">
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+        <div data-reveal="" style="display:flex;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;color:#8ba0cc;">
+          <span style="width:7px;height:7px;background:#8fb8ff;"></span><span>WHAT YOU'RE PAYING RIGHT NOW</span>
+        </div>
+        <h2 data-reveal="2" style="margin:22px 0 0;max-width:820px;font-size:clamp(30px,4vw,50px);font-weight:500;letter-spacing:-0.03em;line-height:1.12;color:#e9f0ff;text-wrap:balance;">Without Ghost Skills, you're already paying for it. <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#a9c9ff;">Three times over.</em></h2>
+      </div>
+      <div class="gs-ph-card" data-reveal="3" data-in-svg="" style="margin-top:52px;background:#080b14;border:1px solid rgba(160,190,255,.16);border-radius:6px;overflow:hidden;box-shadow:0 34px 100px rgba(0,0,0,.6), 0 0 140px rgba(60,110,220,.07);">
+        <input class="gs-ph-radio" type="radio" name="gsph" id="gsph0" checked aria-hidden="true" tabindex="-1">
+        <input class="gs-ph-radio" type="radio" name="gsph" id="gsph1" aria-hidden="true" tabindex="-1">
+        <input class="gs-ph-radio" type="radio" name="gsph" id="gsph2" aria-hidden="true" tabindex="-1">
+        <div class="gs-ph-bar" style="display:flex;flex-wrap:wrap;border-bottom:1px solid rgba(160,190,255,.1);background:#0a101f;">
+          <label class="gs-ph-tab" for="gsph0">01 · TOKENS ÷<i></i></label>
+          <label class="gs-ph-tab" for="gsph1">02 · ERRORS ↓<i></i></label>
+          <label class="gs-ph-tab" for="gsph2" style="border-right:none;">03 · CAPABILITIES ↑<i></i></label>
+        </div>
+        <div class="gs-ph-stage" style="position:relative;height:470px;">
+
+          <div class="gs-ph-panel" data-panel="0">
+            <div style="height:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;align-items:center;padding:30px 44px;box-sizing:border-box;">
+              <div class="gs-ph-art" style="display:flex;justify-content:center;">
+                <svg aria-hidden="true" width="400" height="330" viewBox="0 0 380 300" style="max-width:100%;height:auto;pointer-events:none;">
+                  <defs><filter id="gsT1" x="-12%" y="-12%" width="124%" height="124%"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="21" result="n"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="2.3"><animate attributeName="scale" values="1.9;3.3;1.9" dur="1.4s" repeatCount="indefinite"></animate></feDisplacementMap></filter></defs>
+                  <g filter="url(#gsT1)" fill="none" stroke="#dfe6f2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path class="gs-d gs-t1" pathLength="1" d="M56,46 L138,42 L146,238 L64,242 Z" style="opacity:.85;"></path>
+                    <path d="M70,70 L128,88 M70,102 L130,120 M71,134 L131,152 M72,166 L132,184 M73,198 L133,216" style="opacity:.3;"></path>
+                    <path pathLength="1" d="M44,30 L158,252" stroke="#e05c5c" stroke-width="2.4" style="stroke-dasharray:1;stroke-dashoffset:1;animation:gsX 5.5s 1s ease-in-out infinite;"></path>
+                    <path pathLength="1" d="M158,30 L44,252" stroke="#e05c5c" stroke-width="2.4" style="stroke-dasharray:1;stroke-dashoffset:1;animation:gsX 5.5s 1.2s ease-in-out infinite;"></path>
+                    <rect x="80" y="250" width="7" height="7" stroke="none" fill="#e05c5c" style="opacity:0;animation:gsDrop 2.2s .3s ease-in infinite;"></rect>
+                    <rect x="104" y="252" width="6" height="6" stroke="none" fill="#e05c5c" style="opacity:0;animation:gsDrop 2.8s 1.2s ease-in infinite;"></rect>
+                    <rect x="122" y="250" width="5" height="5" stroke="none" fill="#e05c5c" style="opacity:0;animation:gsDrop 2s 1.8s ease-in infinite;"></rect>
+                    <path d="M170,120 C210,96 240,96 268,116" style="opacity:.6;stroke-dasharray:.06 .07;animation:gsMarch 5s linear infinite;" pathLength="1"></path>
+                    <path class="gs-d gs-t2" pathLength="1" d="M260,108 L272,116 L260,124" style="opacity:.7;"></path>
+                    <text x="215" y="88" text-anchor="middle" fill="#8fb8ff" stroke="none" style="font-family:'IBM Plex Mono',monospace;font-size:26px;animation:gsFadeLoop 3.4s ease-in-out infinite;">÷</text>
+                    <path class="gs-d gs-t3" pathLength="1" d="M262,176 L330,172 L334,238 L266,242 Z" stroke="#8fb8ff" style="opacity:.95;"></path>
+                    <path d="M272,190 Q298,184 324,188 L322,230 Q296,238 274,232 Z" fill="rgba(143,184,255,.2)" stroke="none"></path>
+                    <g style="animation:gsBob 4s ease-in-out infinite;">
+                      <path class="gs-d gs-t4" pathLength="1" d="M282,172 C280,158 282,146 290,140 C296,135 306,136 311,142 C316,148 318,160 316,172" style="opacity:.9;"></path>
+                      <circle cx="292" cy="152" r="2.2" fill="#dfe6f2" stroke="none"></circle>
+                      <circle cx="303" cy="151" r="2.2" fill="#dfe6f2" stroke="none"></circle>
+                      <path d="M294,159 Q298,162 301,158" style="opacity:.8;"></path>
+                    </g>
+                    <path d="M348,140 L348,150 M343,145 L353,145" stroke="#8fb8ff" stroke-width="1.5" style="animation:gsSpark 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center;"></path>
+                    <text x="101" y="282" text-anchor="middle" fill="#5d6f9c" stroke="none" style="font-family:'IBM Plex Mono',monospace;font-size:11px;">your token bill today</text>
+                    <text x="298" y="272" text-anchor="middle" fill="#a9c9ff" stroke="none" style="font-family:'IBM Plex Mono',monospace;font-size:11px;">with ghost skills</text>
+                  </g>
+                </svg>
+              </div>
+              <div>
+                <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;color:#8fb8ff;">01 · TOKENS</div>
+                <h3 style="margin:16px 0 0;font-size:clamp(26px,3vw,38px);font-weight:500;letter-spacing:-0.025em;line-height:1.15;color:#e9f0ff;text-wrap:balance;">Divide your <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#a9c9ff;">development costs</em>.</h3>
+                <p style="margin:18px 0 0;font-size:16px;line-height:1.7;color:#9cb4e2;text-wrap:pretty;">Every failure loop is tokens you pay for. Every re-explanation, tokens. Ghost Skills feeds the answer in before the loop starts — same work, a fraction of the spend.</p>
+                <div style="margin-top:24px;font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:2;color:#5d6f9c;">
+                  <div>without &nbsp;<span style="color:#e05c5c;">████████████</span>&nbsp; relearning, on your bill</div>
+                  <div>with &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#8fb8ff;">███</span>&nbsp; it already knows</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gs-ph-panel" data-panel="1">
+            <div style="height:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;align-items:center;padding:30px 44px;box-sizing:border-box;">
+              <div class="gs-ph-art" style="display:flex;justify-content:center;">
+                <svg aria-hidden="true" width="400" height="330" viewBox="0 0 380 300" style="max-width:100%;height:auto;pointer-events:none;">
+                  <defs><filter id="gsT2" x="-12%" y="-12%" width="124%" height="124%"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="22" result="n"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="2.3"><animate attributeName="scale" values="1.9;3.3;1.9" dur="1.4s" repeatCount="indefinite"></animate></feDisplacementMap></filter></defs>
+                  <g filter="url(#gsT2)" fill="none" stroke="#dfe6f2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path class="gs-d gs-t1" pathLength="1" d="M30,80 C90,74 290,70 350,76" style="opacity:.45;"></path>
+                    <circle cx="50" cy="78" r="8" style="opacity:.7;"></circle>
+                    <circle cx="92" cy="76" r="8" style="opacity:.7;"></circle>
+                    <circle cx="134" cy="75" r="8" style="opacity:.7;"></circle>
+                    <circle cx="176" cy="74" r="8" style="opacity:.7;"></circle>
+                    <circle cx="218" cy="73" r="8" style="opacity:.7;"></circle>
+                    <circle cx="260" cy="73" r="8" style="opacity:.7;"></circle>
+                    <circle cx="302" cy="74" r="8" style="opacity:.7;"></circle>
+                    <path d="M46,74 L54,82 M54,74 L46,82" stroke="#e05c5c" stroke-width="1.6"></path>
+                    <path d="M130,71 L138,79 M138,71 L130,79" stroke="#e05c5c" stroke-width="1.6"></path>
+                    <path d="M214,69 L222,77 M222,69 L214,77" stroke="#e05c5c" stroke-width="1.6"></path>
+                    <path d="M298,70 L306,78 M306,70 L298,78" stroke="#e05c5c" stroke-width="1.6"></path>
+                    <path d="M88,72 L96,80 M96,72 L88,80" stroke="#e05c5c" stroke-width="1.6" style="animation:gsFadeLoop 3s ease-in-out infinite;"></path>
+                    <text x="190" y="40" text-anchor="middle" fill="#5d6f9c" stroke="none" style="font-family:'IBM Plex Mono',monospace;font-size:11px;">without: commit, fail, retry, retry…</text>
+                    <path d="M340,100 C330,130 240,140 190,150" style="opacity:.55;stroke-dasharray:.06 .07;animation:gsMarch 5s linear infinite;" pathLength="1"></path>
+                    <path class="gs-d gs-t3" pathLength="1" d="M200,142 L186,151 L198,158" style="opacity:.7;"></path>
+                    <path class="gs-d gs-t4" pathLength="1" d="M40,200 C90,194 200,190 250,192" style="opacity:.6;"></path>
+                    <circle class="gs-d gs-t4" cx="70" cy="198" r="9" stroke="#8fb8ff" pathLength="1"></circle>
+                    <circle class="gs-d gs-t5" cx="140" cy="195" r="9" stroke="#8fb8ff" pathLength="1"></circle>
+                    <circle class="gs-d gs-t5" cx="210" cy="193" r="9" stroke="#8fb8ff" pathLength="1"></circle>
+                    <path class="gs-d gs-t6" pathLength="1" d="M66,198 L69,201 L75,194" stroke="#8fb8ff" stroke-width="1.8"></path>
+                    <path class="gs-d gs-t6" pathLength="1" d="M136,195 L139,198 L145,191" stroke="#8fb8ff" stroke-width="1.8"></path>
+                    <path class="gs-d gs-t6" pathLength="1" d="M206,193 L209,196 L215,189" stroke="#8fb8ff" stroke-width="1.8"></path>
+                    <path class="gs-d gs-t7" pathLength="1" d="M290,160 L290,224 M290,164 L330,172 L290,186" stroke="#8fb8ff" style="opacity:.9;"></path>
+                    <path d="M282,230 L298,230" style="opacity:.5;"></path>
+                    <g style="animation:gsBob 4s ease-in-out infinite;">
+                      <path d="M318,232 C315,220 317,208 324,203 C330,199 339,200 343,205 C347,210 349,220 347,232 C343,228 339,229 336,232 C332,229 328,229 324,232 C322,229 320,229 318,232" style="opacity:.8;"></path>
+                      <circle cx="328" cy="214" r="2" fill="#dfe6f2" stroke="none"></circle>
+                      <circle cx="337" cy="213" r="2" fill="#dfe6f2" stroke="none"></circle>
+                    </g>
+                    <text x="190" y="268" text-anchor="middle" fill="#a9c9ff" stroke="none" style="font-family:'IBM Plex Mono',monospace;font-size:11px;">with: same result, first try — shipped</text>
+                  </g>
+                </svg>
+              </div>
+              <div>
+                <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;color:#8fb8ff;">02 · ERRORS</div>
+                <h3 style="margin:16px 0 0;font-size:clamp(26px,3vw,38px);font-weight:500;letter-spacing:-0.025em;line-height:1.15;color:#e9f0ff;text-wrap:balance;">Far fewer errors. Far fewer commits. <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#a9c9ff;">Same result.</em></h3>
+                <p style="margin:18px 0 0;font-size:16px;line-height:1.7;color:#9cb4e2;text-wrap:pretty;">The mistakes your agent keeps remaking are exactly the ones your history already solved. First-try fixes instead of retry loops — cleaner diffs, shorter reviews, calmer CI.</p>
+                <div style="margin-top:24px;font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:2;color:#5d6f9c;">
+                  <div>without &nbsp;<span style="color:#e05c5c;">✗ ✗ ✗ ✗ ✗ ✓</span>&nbsp; eventually</div>
+                  <div>with &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#8fb8ff;">✓</span>&nbsp; it remembered</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gs-ph-panel" data-panel="2">
+            <div style="height:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;align-items:center;padding:30px 44px;box-sizing:border-box;">
+              <div class="gs-ph-art" style="display:flex;justify-content:center;">
+                <svg aria-hidden="true" width="400" height="330" viewBox="0 0 380 300" style="max-width:100%;height:auto;pointer-events:none;">
+                  <defs><filter id="gsT3" x="-12%" y="-12%" width="124%" height="124%"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="23" result="n"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="2.3"><animate attributeName="scale" values="1.9;3.3;1.9" dur="1.4s" repeatCount="indefinite"></animate></feDisplacementMap></filter></defs>
+                  <g filter="url(#gsT3)" fill="none" stroke="#dfe6f2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="46" cy="60" r="3" fill="#8fb8ff" stroke="none" style="animation:gsSpark 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center;"></circle>
+                    <circle cx="80" cy="110" r="3" fill="#8fb8ff" stroke="none" style="animation:gsSpark 3s .6s ease-in-out infinite;transform-box:fill-box;transform-origin:center;"></circle>
+                    <circle cx="40" cy="170" r="3" fill="#8fb8ff" stroke="none" style="animation:gsSpark 2.7s 1.1s ease-in-out infinite;transform-box:fill-box;transform-origin:center;"></circle>
+                    <circle cx="92" cy="220" r="3" fill="#8fb8ff" stroke="none" style="animation:gsSpark 3.3s 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center;"></circle>
+                    <circle cx="66" cy="260" r="3" fill="#8fb8ff" stroke="none" style="animation:gsSpark 2.5s .3s ease-in-out infinite;transform-box:fill-box;transform-origin:center;"></circle>
+                    <path d="M46,60 L80,110 L40,170 L92,220 L66,260 M80,110 L92,220" style="opacity:.25;"></path>
+                    <text x="66" y="290" text-anchor="middle" fill="#5d6f9c" stroke="none" style="font-family:'IBM Plex Mono',monospace;font-size:11px;">thousands of devs</text>
+                    <g opacity="0">
+                      <path d="M-11,-13 L10,-15 L12,13 L-9,15 Z" style="opacity:.95;"></path>
+                      <path d="M-5,-6 L6,-7 M-4,0 L7,-1" style="opacity:.5;"></path>
+                      <path d="M-4,6 L-1,9 L8,0" stroke="#8fb8ff" stroke-width="1.8"></path>
+                      <animateMotion dur="2.6s" repeatCount="indefinite" path="M84,120 C150,110 210,120 260,150"></animateMotion>
+                      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="2.6s" repeatCount="indefinite"></animate>
+                    </g>
+                    <g opacity="0">
+                      <path d="M-11,-13 L10,-15 L12,13 L-9,15 Z" style="opacity:.95;"></path>
+                      <path d="M-5,-6 L6,-7 M-4,0 L7,-1" style="opacity:.5;"></path>
+                      <path d="M-4,6 L-1,9 L8,0" stroke="#8fb8ff" stroke-width="1.8"></path>
+                      <animateMotion dur="3.4s" begin="1.2s" repeatCount="indefinite" path="M90,214 C160,220 220,200 262,172"></animateMotion>
+                      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="3.4s" begin="1.2s" repeatCount="indefinite"></animate>
+                    </g>
+                    <circle cx="298" cy="160" r="52" stroke="#8fb8ff" style="opacity:.4;animation:gsRing 3s ease-out infinite;transform-box:fill-box;transform-origin:center;"></circle>
+                    <circle cx="298" cy="160" r="52" stroke="#8fb8ff" style="opacity:.4;animation:gsRing 3s 1.5s ease-out infinite;transform-box:fill-box;transform-origin:center;"></circle>
+                    <g style="animation:gsBob 4.5s ease-in-out infinite;">
+                      <path class="gs-d gs-t2" pathLength="1" d="M272,192 C268,176 270,154 280,144 C288,135 306,134 314,144 C322,154 324,176 320,192 C314,186 308,188 304,193 C298,188 292,188 286,193 C281,188 276,187 272,192" style="opacity:.95;"></path>
+                      <circle cx="290" cy="160" r="2.6" fill="#dfe6f2" stroke="none"></circle>
+                      <circle cx="304" cy="159" r="2.6" fill="#dfe6f2" stroke="none"></circle>
+                      <path d="M293,169 Q297,172 301,168" style="opacity:.8;"></path>
+                    </g>
+                    <path d="M336,110 L336,120 M331,115 L341,115" stroke="#8fb8ff" stroke-width="1.5" style="animation:gsSpark 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center;"></path>
+                    <path d="M258,102 L258,110 M254,106 L262,106" stroke="#8fb8ff" stroke-width="1.4" style="animation:gsSpark 3.1s .8s ease-in-out infinite;transform-box:fill-box;transform-origin:center;"></path>
+                    <text x="298" y="240" text-anchor="middle" fill="#a9c9ff" stroke="none" style="font-family:'IBM Plex Mono',monospace;font-size:11px;">you, upgraded</text>
+                  </g>
+                </svg>
+              </div>
+              <div>
+                <div style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;color:#8fb8ff;">03 · CAPABILITIES</div>
+                <h3 style="margin:16px 0 0;font-size:clamp(26px,3vw,38px);font-weight:500;letter-spacing:-0.025em;line-height:1.15;color:#e9f0ff;text-wrap:balance;">Ship what you <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#a9c9ff;">never learned</em>.</h3>
+                <p style="margin:18px 0 0;font-size:16px;line-height:1.7;color:#9cb4e2;text-wrap:pretty;">The collective memory hands your agent skills thousands of developers paid for — stacks you've never touched, traps you've never hit — the day you need them. Your ceiling stops being what you know.</p>
+                <div style="margin-top:24px;font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:2;color:#5d6f9c;">
+                  <div>without &nbsp;<span style="color:#e05c5c;">your skills only</span></div>
+                  <div>with &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#8fb8ff;">theirs too — measured, ranked, injected</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;padding:22px 28px;border-top:1px solid rgba(160,190,255,.1);background:#0a101f;">
+          <p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.03em;color:#9cb4e2;text-align:center;">Every day without it, you pay all three. <span style="color:#e9f0ff;">The install takes 90 seconds.</span></p>
+          <a href="#pricing" class="gsh3" style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.06em;background:#f2f6ff;color:#0a1330;border:1px solid #f2f6ff;border-radius:3px;padding:10px 20px;display:inline-block;">[ GET GHOST SKILLS ]</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="features" style="background:#e9eaec;color:#10141f;padding:110px 28px;box-sizing:border-box;">
     <div style="max-width:1200px;margin:0 auto;">
       <div data-reveal="" style="display:flex;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.14em;color:#39415a;">

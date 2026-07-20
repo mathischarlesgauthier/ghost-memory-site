@@ -18,7 +18,7 @@ export const EARN_HTML = `
         <nav class="gs-nav-links" style="display:flex;gap:18px;flex:1;justify-content:center;flex-wrap:wrap;">
           <a href="/#problem" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;color:#a8bce4;white-space:nowrap;">THE PROBLEM</a>
           <a href="/#features" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;color:#a8bce4;white-space:nowrap;">WHY US</a>
-          <a href="/#process" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;color:#a8bce4;white-space:nowrap;">HOW IT WORKS</a>
+          <a href="/skills" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;color:#a8bce4;white-space:nowrap;">SKILLS</a>
           <a href="/#pricing" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;color:#a8bce4;white-space:nowrap;">PRICING</a>
           <a href="#pool" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;color:#f2f6ff;white-space:nowrap;border-bottom:1px solid #8fb8ff;padding-bottom:2px;">EARN</a>
         </nav>

@@ -31,7 +31,6 @@ export function nav(active = ""): string {
       <nav class="gs-nav-links" style="display:flex;gap:18px;flex:1;justify-content:center;flex-wrap:wrap;">
         ${item("/skills", "SKILLS", "skills")}
         ${item("/#features", "WHY US", "why")}
-        ${item("/#process", "HOW IT WORKS", "how")}
         ${item("/#pricing", "PRICING", "pricing")}
         ${item("/earn", "EARN", "earn")}
       </nav>

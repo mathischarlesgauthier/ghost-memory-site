@@ -21,7 +21,7 @@ export const CONTENT_HTML = `
         <nav class="gs-nav-links" style="display:flex;gap:18px;flex:1;justify-content:center;flex-wrap:wrap;">
           <a href="#problem" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;color:#a8bce4;white-space:nowrap;">THE PROBLEM</a>
           <a href="#features" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;color:#a8bce4;white-space:nowrap;">WHY US</a>
-          <a href="#process" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;color:#a8bce4;white-space:nowrap;">HOW IT WORKS</a>
+          <a href="/skills" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;color:#a8bce4;white-space:nowrap;">SKILLS</a>
           <a href="#pricing" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;color:#a8bce4;white-space:nowrap;">PRICING</a>
           <a href="#objections" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;color:#a8bce4;white-space:nowrap;">OBJECTIONS</a>
           <a href="/earn" style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;color:#f2f6ff;white-space:nowrap;border-bottom:1px solid #8fb8ff;padding-bottom:2px;">EARN</a>
@@ -65,6 +65,7 @@ export const CONTENT_HTML = `
       <p data-reveal="" style="margin:0;font-size:clamp(24px,3.2vw,38px);font-weight:500;letter-spacing:-0.02em;line-height:1.35;color:#eaf1ff;text-wrap:balance;"><span data-count="670000" style="font-family:'IBM Plex Mono',monospace;">670,000</span> skills out there, ranked by download count. A number you can buy. It tells you nothing.</p>
       <p data-reveal="2" style="margin:30px 0 0;max-width:640px;font-size:18px;line-height:1.7;color:#a9bce6;text-wrap:pretty;">Ghost Skills ranks by <em style="font-family:'Instrument Serif',serif;font-style:italic;color:#cfe0ff;">lift</em> — how much a skill actually improves a real task, measured by rerunning it.</p>
       <p data-reveal="3" style="margin:44px 0 0;font-family:'IBM Plex Mono',monospace;font-size:clamp(20px,2.6vw,30px);letter-spacing:.02em;color:#dfe9ff;">We don't count. We measure.<span style="display:inline-block;width:10px;height:24px;background:#8fb8ff;margin-left:10px;vertical-align:-3px;animation:gsBlink 1.1s steps(1) infinite;"></span></p>
+      <a data-reveal="3" href="/skills" style="margin-top:26px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.06em;color:#a9c9ff;border-bottom:1px solid rgba(143,184,255,.45);padding-bottom:3px;">See the public registry — every skill ranked by measured lift →</a>
       <img data-reveal="3" src="/ghost-logo.png" alt="" style="margin-top:64px;width:104px;height:auto;animation:gsFloat 5s ease-in-out infinite;filter:drop-shadow(0 18px 44px rgba(0,10,40,.65));">
       <div style="margin-top:8px;width:2px;height:110px;background:linear-gradient(180deg,rgba(143,184,255,.9),transparent);animation:gsPulse 3s ease-in-out infinite;"></div>
     </div>
@@ -564,6 +565,7 @@ export const CONTENT_HTML = `
         </div>
         <h2 data-reveal="2" style="margin:22px 0 0;font-size:clamp(32px,4.2vw,52px);font-weight:500;letter-spacing:-0.03em;line-height:1.12;text-wrap:balance;">Your own memory is <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#2453c4;">free</em>.<br>The collective memory is <em style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:#2453c4;">a game changer</em>.</h2>
         <p data-reveal="3" style="margin:18px 0 0;max-width:660px;font-size:16px;line-height:1.7;color:#3c4356;text-wrap:pretty;">We never charge for retrieving your own skills, distilling on your own key, or validating. You pay only for access to the collective memory — measured in unlocks.</p>
+        <a data-reveal="3" href="/skills" style="margin-top:20px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:600;letter-spacing:.06em;color:#2453c4;border-bottom:1px solid rgba(36,83,196,.4);padding-bottom:3px;">Browse the collective memory before you pay →</a>
       </div>
       <div style="margin-top:60px;display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:14px;align-items:stretch;">
         <div data-reveal="" style="background:#f5f5f4;border:1px solid rgba(16,20,31,.2);border-radius:4px;padding:32px 28px;display:flex;flex-direction:column;transition:transform .3s ease;" class="gsh16">
@@ -783,6 +785,7 @@ export const CONTENT_HTML = `
       <div style="display:flex;gap:28px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;">
         <a href="#problem" style="color:#8ba0cc;">THE PROBLEM</a>
         <a href="#features" style="color:#8ba0cc;">WHY US</a>
+        <a href="/skills" style="color:#8ba0cc;">SKILLS</a>
         <a href="#pricing" style="color:#8ba0cc;">PRICING</a>
         <a href="/earn" style="color:#8ba0cc;">EARN</a>
         <a href="${GITHUB}" target="_blank" rel="noopener" style="color:#8ba0cc;">GITHUB ↗</a>

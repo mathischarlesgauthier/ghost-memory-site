@@ -103,6 +103,43 @@ function ghostCopy(btn){
   if(document.readyState!=='loading')initDevice();
   else document.addEventListener('DOMContentLoaded',initDevice);
 })();
+(function(){
+  function initSkills(){
+    var root=document.getElementById('gs-skills');
+    if(!root)return;
+    var search=document.getElementById('gs-sk-search');
+    var list=document.getElementById('gs-sk-list');
+    var empty=document.getElementById('gs-sk-empty');
+    var cards=[].slice.call(list.querySelectorAll('.gs-sk-card'));
+    var chips=[].slice.call(root.querySelectorAll('.gs-sk-chip'));
+    var active={filter:'all',value:''};
+    function apply(){
+      var q=(search.value||'').trim().toLowerCase();
+      var shown=0;
+      cards.forEach(function(c){
+        var okText=!q||(c.getAttribute('data-text')||'').indexOf(q)>=0;
+        var okFilter=true;
+        if(active.filter==='stack')okFilter=(c.getAttribute('data-stack')||'')===active.value;
+        else if(active.filter==='tag')okFilter=(','+(c.getAttribute('data-tags')||'')+',').indexOf(','+active.value+',')>=0;
+        var show=okText&&okFilter;
+        c.style.display=show?'':'none';
+        if(show)shown++;
+      });
+      empty.hidden=shown>0;
+    }
+    search.addEventListener('input',apply);
+    chips.forEach(function(chip){
+      chip.addEventListener('click',function(){
+        chips.forEach(function(x){x.classList.remove('gs-sk-chip-on');});
+        chip.classList.add('gs-sk-chip-on');
+        active={filter:chip.getAttribute('data-filter'),value:chip.getAttribute('data-value')};
+        apply();
+      });
+    });
+  }
+  if(document.readyState!=='loading')initSkills();
+  else document.addEventListener('DOMContentLoaded',initSkills);
+})();
 `;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
